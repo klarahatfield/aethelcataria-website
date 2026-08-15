@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>작품 · Aethel Cataria</title>
+<meta name="description" content="고양이 약초사의 비밀 정원 게임, Moon Phase Calendar, Star Herbarium Diary — 에델 카타리아의 작품들.">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .work-detail{
+    max-width: 760px;
+    margin: 0 auto 110px;
+    padding-top: 20px;
+    scroll-margin-top: 100px;
+  }
+  .work-detail:last-child{ margin-bottom: 40px; }
+  .work-detail-head{
+    display:flex; align-items:flex-start; gap:22px;
+    margin-bottom: 22px;
+  }
+  .work-detail-icon{
+    flex: 0 0 auto;
+    width: 52px; height: 52px;
+    color: var(--gold);
+  }
+  .work-detail-kicker{
+    font-family: var(--font-mono);
+    font-size: .7rem; letter-spacing:.1em; text-transform: uppercase;
+    color: var(--gold); margin: 0 0 8px;
+  }
+  .work-detail h2{
+    font-family: var(--font-display-kr);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+    color: var(--parchment);
+  }
+  .work-detail .en-title{
+    font-family: var(--font-display-en);
+    font-style: italic;
+    color: var(--gold-soft);
+    font-size: .95rem;
+    margin: 6px 0 0;
+  }
+  .work-detail p.body{
+    color: var(--parchment-dim);
+    margin: 0 0 16px;
+  }
+  .spec-list{
+    list-style: none;
+    margin: 22px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(212,175,106,.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 16px;
+  }
+  .spec-list li{
+    font-size: .84rem;
+  }
+  .spec-list .k{
+    display:block;
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .spec-list .v{ color: var(--parchment); }
+  .work-detail-cta{
+    margin-top: 26px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  hr.div{
+    border: none;
+    border-top: 1px solid rgba(212,175,106,.15);
+    max-width: 760px;
+    margin: 0 auto 90px;
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="icon-cottage2" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M10 34 L32 13 L54 34"/>
+  <rect x="15" y="34" width="34" height="22"/>
+  <path d="M27 56 L27 41 Q32 36 37 41 L37 56"/>
+</symbol>
+<symbol id="icon-moonset2" viewBox="0 0 64 64" fill="currentColor" stroke="none">
+  <circle cx="20" cy="34" r="10" opacity=".38"/>
+  <circle cx="32" cy="27" r="13" opacity=".85"/>
+  <circle cx="46" cy="34" r="10" opacity=".38"/>
+</symbol>
+<symbol id="icon-book2" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M32 18 C24 12 14 14 10 18 L10 46 C14 42 24 40 32 46 C40 40 50 42 54 46 L54 18 C50 14 40 12 32 18 Z"/>
+  <line x1="32" y1="18" x2="32" y2="46"/>
+</symbol>
+<symbol id="icon-quill2" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M46 10 C31 18 20 33 15 52 L22 49 C29 32 39 20 50 14 Z"/>
+  <line x1="15" y1="52" x2="9" y2="59"/>
+</symbol>
+</defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand-mark">
+      <span class="en">Aethel&nbsp;Cataria</span>
+      <span class="kr">에델 카타리아</span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="index.html">홈</a>
+      <a href="world.html">세계관</a>
+      <a href="works.html" aria-current="page">작품</a>
+      <a href="index.html#contact">문의</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <p class="eyebrow">Works</p>
+    <h1>작품</h1>
+    <p class="en">From the garden, into your hands</p>
+    <p class="desc">정원에서 자라난 이야기가 게임으로, 캘린더로, 다이어리로, 그리고 곧 한 권의 소설로 이어집니다.</p>
+  </section>
+
+  <section class="section" style="padding-top:40px">
+
+    <div class="work-detail" id="game">
+      <div class="work-detail-head">
+        <span class="work-detail-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-cottage2" xlink:href="#icon-cottage2"/></svg></span>
+        <div>
+          <p class="work-detail-kicker">Browser Game</p>
+          <h2>고양이 약초사의 비밀 정원</h2>
+          <p class="en-title">Herbalist Cat's Secret Garden</p>
+        </div>
+      </div>
+      <p class="body">파노라마로 펼쳐진 정원을 탐험하며 약초를 채집하고, 손님을 맞이하고, 제자들과의 관계를 쌓아가는 브라우저 게임입니다. 낮과 밤이 바뀌고, 계절마다 정원의 표정이 달라집니다.</p>
+      <ul class="spec-list">
+        <li><span class="k">Platform</span><span class="v">Web Browser</span></li>
+        <li><span class="k">Style</span><span class="v">수채화 일러스트</span></li>
+        <li><span class="k">Status</span><span class="v">서비스 중</span></li>
+      </ul>
+      <div class="work-detail-cta">
+        <a class="btn btn-gold" href="#">itch.io에서 플레이하기</a>
+      </div>
+    </div>
+
+    <hr class="div">
+
+    <div class="work-detail" id="calendar">
+      <div class="work-detail-head">
+        <span class="work-detail-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-moonset2" xlink:href="#icon-moonset2"/></svg></span>
+        <div>
+          <p class="work-detail-kicker">Calendar · 2027</p>
+          <h2>Moon Phase Calendar</h2>
+          <p class="en-title">A Journey Through the Lunar Cycle</p>
+        </div>
+      </div>
+      <p class="body">열두 달, 열두 개의 정원 풍경을 담은 풀컬러 캘린더입니다. 그리드 없이 심플한 문페이즈 아이콘으로, 그날 밤하늘의 달 모양을 함께 표시했습니다. 탁상형과 벽걸이형 두 가지로 준비됩니다.</p>
+      <ul class="spec-list">
+        <li><span class="k">탁상형</span><span class="v">208×148mm</span></li>
+        <li><span class="k">벽걸이형</span><span class="v">300×440mm</span></li>
+        <li><span class="k">Status</span><span class="v">텀블벅 준비 중</span></li>
+      </ul>
+      <div class="work-detail-cta">
+        <a class="btn btn-gold" href="#">텀블벅에서 알림 받기</a>
+      </div>
+    </div>
+
+    <hr class="div">
+
+    <div class="work-detail" id="diary">
+      <div class="work-detail-head">
+        <span class="work-detail-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-book2" xlink:href="#icon-book2"/></svg></span>
+        <div>
+          <p class="work-detail-kicker">Diary · 2027</p>
+          <h2>Star Herbarium Diary</h2>
+          <p class="en-title">A Living Herbarium</p>
+        </div>
+      </div>
+      <p class="body">열두 달의 약초를 표본첩처럼 기록한 다이어리입니다. 다이어리보다 아트북에 가까운 디테일로, 걸어두거나 책상 위에 두는 것만으로도 소장 가치가 있습니다.</p>
+      <ul class="spec-list">
+        <li><span class="k">사이즈</span><span class="v">A5 (148×210mm)</span></li>
+        <li><span class="k">표지</span><span class="v">하드커버 · 무광코팅</span></li>
+        <li><span class="k">Status</span><span class="v">텀블벅 준비 중</span></li>
+      </ul>
+      <div class="work-detail-cta">
+        <a class="btn btn-gold" href="#">텀블벅에서 알림 받기</a>
+      </div>
+    </div>
+
+    <hr class="div">
+
+    <div class="work-detail" id="novella">
+      <div class="work-detail-head">
+        <span class="work-detail-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-quill2" xlink:href="#icon-quill2"/></svg></span>
+        <div>
+          <p class="work-detail-kicker">Novella</p>
+          <h2>바바 이야기</h2>
+          <p class="en-title">The story of the one who stayed</p>
+        </div>
+      </div>
+      <p class="body">300년 전 스스로 정원에 갇히기를 택한 바바. 그 이유의 전모는 아직 아무에게도 밝혀지지 않았습니다. 사건을 요약하는 대신 감정에 머무는, 어른을 위한 다크-코지 판타지 노벨라가 곧 찾아옵니다.</p>
+      <ul class="spec-list">
+        <li><span class="k">분량</span><span class="v">3~5만자 노벨라</span></li>
+        <li><span class="k">Status</span><span class="v">집필 중</span></li>
+      </ul>
+      <div class="work-detail-cta">
+        <a class="btn btn-outline" href="index.html#contact">소식 알림 신청하기</a>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-cta">
+      <h2>이야기가 더 궁금하신가요?</h2>
+      <a class="mail" href="mailto:hello@aethelcataria.com">hello@aethelcataria.com</a>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="world.html">세계관</a></li>
+          <li><a href="works.html">작품</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Tumblbug</a></li>
+          <li><a href="#">itch.io</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>© Aethel Cataria · 에델 카타리아</span>
+    <span>Illustrated &amp; written by Klara</span>
+  </div>
+</footer>
+
+</body>
+</html>

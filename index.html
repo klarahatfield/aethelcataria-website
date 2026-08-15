@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aethel Cataria · 에델 카타리아</title>
+<meta name="description" content="달빛 아래, 오래된 마법이 자라는 곳 — 고양이 약초사 바바의 정원, 에델 카타리아 세계관 공식 홈페이지.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ============ icon sprite (hidden) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+
+<symbol id="icon-spike" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+  <line x1="32" y1="56" x2="32" y2="10"/>
+  <line x1="32" y1="46" x2="20" y2="40"/>
+  <line x1="32" y1="46" x2="44" y2="40"/>
+  <line x1="32" y1="36" x2="20" y2="30"/>
+  <line x1="32" y1="36" x2="44" y2="30"/>
+  <line x1="32" y1="26" x2="20" y2="20"/>
+  <line x1="32" y1="26" x2="44" y2="20"/>
+  <line x1="32" y1="16" x2="24" y2="10"/>
+  <line x1="32" y1="16" x2="40" y2="10"/>
+</symbol>
+
+<symbol id="icon-lavender" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+  <line x1="32" y1="56" x2="32" y2="22"/>
+  <path d="M32 50 Q24 46 26 40"/>
+  <path d="M32 50 Q40 46 38 40"/>
+  <ellipse cx="32" cy="30" rx="3" ry="4.4" fill="currentColor" stroke="none" opacity=".5"/>
+  <ellipse cx="26" cy="24" rx="3.4" ry="5" fill="currentColor" stroke="none" opacity=".65"/>
+  <ellipse cx="38" cy="24" rx="3.4" ry="5" fill="currentColor" stroke="none" opacity=".65"/>
+  <ellipse cx="32" cy="19" rx="4" ry="6" fill="currentColor" stroke="none" opacity=".9"/>
+</symbol>
+
+<symbol id="icon-lobed-leaf" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+  <line x1="32" y1="58" x2="32" y2="46"/>
+  <path d="M32 46 L24 40 L26 34 L20 30 L24 24 L18 18 L32 10 L46 18 L40 24 L44 30 L38 34 L40 40 Z"/>
+</symbol>
+
+<symbol id="icon-lily" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+  <ellipse cx="32" cy="48" rx="20" ry="8"/>
+  <line x1="32" y1="40" x2="32" y2="26"/>
+  <g stroke-width="2">
+    <ellipse cx="32" cy="10" rx="4" ry="9" transform="rotate(0 32 17)"/>
+    <ellipse cx="32" cy="10" rx="4" ry="9" transform="rotate(60 32 17)"/>
+    <ellipse cx="32" cy="10" rx="4" ry="9" transform="rotate(120 32 17)"/>
+    <ellipse cx="32" cy="10" rx="4" ry="9" transform="rotate(180 32 17)"/>
+    <ellipse cx="32" cy="10" rx="4" ry="9" transform="rotate(240 32 17)"/>
+    <ellipse cx="32" cy="10" rx="4" ry="9" transform="rotate(300 32 17)"/>
+  </g>
+</symbol>
+
+<symbol id="icon-rose" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="32" y1="58" x2="32" y2="34"/>
+  <path d="M32 50 Q22 48 24 40"/>
+  <path d="M24 20 Q32 6 40 20 Q45 29 32 31 Q19 29 24 20 Z"/>
+  <circle cx="32" cy="20" r="4.5"/>
+</symbol>
+
+<symbol id="icon-daisy" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+  <line x1="32" y1="58" x2="32" y2="34"/>
+  <line x1="32" y1="14" x2="32" y2="7"/>
+  <line x1="37.7" y1="16.3" x2="42.6" y2="11.4"/>
+  <line x1="40" y1="22" x2="47" y2="22"/>
+  <line x1="37.7" y1="27.7" x2="42.6" y2="32.6"/>
+  <line x1="32" y1="30" x2="32" y2="37"/>
+  <line x1="26.3" y1="27.7" x2="21.4" y2="32.6"/>
+  <line x1="24" y1="22" x2="17" y2="22"/>
+  <line x1="26.3" y1="16.3" x2="21.4" y2="11.4"/>
+  <circle cx="32" cy="22" r="5" fill="currentColor" stroke="none"/>
+</symbol>
+
+<symbol id="icon-basil" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+  <line x1="32" y1="58" x2="32" y2="14"/>
+  <ellipse cx="20" cy="34" rx="12" ry="7" transform="rotate(-25 20 34)"/>
+  <ellipse cx="44" cy="34" rx="12" ry="7" transform="rotate(25 44 34)"/>
+  <ellipse cx="32" cy="14" rx="6" ry="10"/>
+</symbol>
+
+<symbol id="icon-comfrey" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+  <line x1="32" y1="58" x2="32" y2="44"/>
+  <path d="M32 44 C14 40 12 18 32 8 C52 18 50 40 32 44 Z"/>
+  <line x1="32" y1="42" x2="32" y2="12"/>
+</symbol>
+
+<symbol id="icon-lemonbalm" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+  <line x1="32" y1="58" x2="32" y2="46"/>
+  <path d="M32 46 L26 42 L28 38 L22 34 L25 30 L20 26 L24 22 L32 8 L40 22 L44 26 L39 30 L42 34 L36 38 L38 42 Z"/>
+</symbol>
+
+<symbol id="icon-sage" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+  <line x1="32" y1="58" x2="32" y2="12"/>
+  <ellipse cx="22" cy="42" rx="8" ry="4" transform="rotate(-20 22 42)"/>
+  <ellipse cx="42" cy="36" rx="8" ry="4" transform="rotate(20 42 36)"/>
+  <ellipse cx="22" cy="28" rx="7" ry="3.6" transform="rotate(-15 22 28)"/>
+  <ellipse cx="32" cy="14" rx="3" ry="5" fill="currentColor" stroke="none" opacity=".75"/>
+  <ellipse cx="28" cy="18" rx="2.6" ry="4" fill="currentColor" stroke="none" opacity=".5"/>
+  <ellipse cx="36" cy="18" rx="2.6" ry="4" fill="currentColor" stroke="none" opacity=".5"/>
+</symbol>
+
+<symbol id="icon-holly" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+  <line x1="32" y1="58" x2="32" y2="48"/>
+  <path d="M32 48 L26 44 L28 40 L20 36 L26 32 L18 26 L26 24 L24 16 L32 20 L40 16 L38 24 L46 26 L38 32 L44 36 L36 40 L38 44 Z"/>
+  <circle cx="28" cy="13" r="3" fill="currentColor" stroke="none"/>
+  <circle cx="34" cy="11" r="3" fill="currentColor" stroke="none"/>
+  <circle cx="32" cy="17" r="2.6" fill="currentColor" stroke="none"/>
+</symbol>
+
+<symbol id="icon-cottage" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M10 34 L32 13 L54 34"/>
+  <rect x="15" y="34" width="34" height="22"/>
+  <path d="M27 56 L27 41 Q32 36 37 41 L37 56"/>
+</symbol>
+
+<symbol id="icon-moonset" viewBox="0 0 64 64" fill="currentColor" stroke="none">
+  <circle cx="20" cy="34" r="10" opacity=".38"/>
+  <circle cx="32" cy="27" r="13" opacity=".85"/>
+  <circle cx="46" cy="34" r="10" opacity=".38"/>
+</symbol>
+
+<symbol id="icon-book" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M32 18 C24 12 14 14 10 18 L10 46 C14 42 24 40 32 46 C40 40 50 42 54 46 L54 18 C50 14 40 12 32 18 Z"/>
+  <line x1="32" y1="18" x2="32" y2="46"/>
+</symbol>
+
+<symbol id="icon-quill" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M46 10 C31 18 20 33 15 52 L22 49 C29 32 39 20 50 14 Z"/>
+  <line x1="15" y1="52" x2="9" y2="59"/>
+</symbol>
+
+</defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand-mark">
+      <span class="en">Aethel&nbsp;Cataria</span>
+      <span class="kr">에델 카타리아</span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="index.html" aria-current="page">홈</a>
+      <a href="world.html">세계관</a>
+      <a href="works.html">작품</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="stars" aria-hidden="true">
+      <span style="top:12%;left:8%"></span>
+      <span style="top:22%;left:88%"></span>
+      <span style="top:8%;left:52%"></span>
+      <span style="top:34%;left:16%"></span>
+      <span style="top:30%;left:76%"></span>
+      <span style="top:5%;left:70%"></span>
+    </div>
+
+    <svg class="moon-arc" viewBox="0 0 600 130" aria-hidden="true">
+      <path d="M40,90 Q300,-10 560,90" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".35"/>
+      <circle cx="40" cy="82" r="9" fill="#D4AF6A" opacity=".32"/>
+      <circle cx="127" cy="56" r="12" fill="#D4AF6A" opacity=".5"/>
+      <circle cx="213" cy="36" r="15" fill="#D4AF6A" opacity=".7"/>
+      <circle cx="300" cy="24" r="19" fill="#E9D3A3" opacity=".95"/>
+      <circle cx="387" cy="36" r="15" fill="#D4AF6A" opacity=".7"/>
+      <circle cx="473" cy="56" r="12" fill="#D4AF6A" opacity=".5"/>
+      <circle cx="560" cy="82" r="9" fill="#D4AF6A" opacity=".32"/>
+    </svg>
+
+    <p class="hero-eyebrow">Herbalist Cat's Secret Garden Universe</p>
+    <h1>Aethel&nbsp;Cataria</h1>
+    <p class="kr-title">에델 카타리아</p>
+    <p class="tagline">달빛 아래, 오래된 마법이 자라는 곳</p>
+    <p class="lede">안경 쓴 생강빛 고양이 약초사 바바가 사계절 정원을 돌보며 당신을 기다립니다. 시계 대신 달의 차오름을 따라 흐르는 시간, 그리고 오래 산 존재만이 가질 수 있는 씁쓸한 위트 — 이곳은 그런 이야기가 사는 곳입니다.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="world.html">세계관 들여다보기</a>
+      <a class="btn btn-outline" href="works.html">작품 만나보기</a>
+    </div>
+  </section>
+
+  <section class="section herbarium">
+    <div class="section-head">
+      <p class="eyebrow">The Garden's Herbarium</p>
+      <div class="rule"></div>
+      <h2>정원의 표본첩</h2>
+      <p>바바의 다이어리 속, 열두 달을 채우는 열두 가지 약초</p>
+    </div>
+
+    <div class="rail" role="list" aria-label="열두 달의 약초 표본">
+      <article class="specimen" role="listitem">
+        <p class="month">I · JANUARY</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-spike" xlink:href="#icon-spike"/></svg></span>
+        <h3 class="name">로즈마리</h3>
+        <p class="caption">evergreen through the frost</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">II · FEBRUARY</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-lavender" xlink:href="#icon-lavender"/></svg></span>
+        <h3 class="name">라벤더</h3>
+        <p class="caption">for sleep and peace</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">III · MARCH</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-lobed-leaf" xlink:href="#icon-lobed-leaf"/></svg></span>
+        <h3 class="name">쑥</h3>
+        <p class="caption">the first green of the thaw</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">IV · APRIL</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-lily" xlink:href="#icon-lily"/></svg></span>
+        <h3 class="name">수련</h3>
+        <p class="caption">moonlight lands on water</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">V · MAY</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-rose" xlink:href="#icon-rose"/></svg></span>
+        <h3 class="name">장미</h3>
+        <p class="caption">love, and its healing</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">VI · JUNE</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-daisy" xlink:href="#icon-daisy"/></svg></span>
+        <h3 class="name">카모마일</h3>
+        <p class="caption">a quiet afternoon</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">VII · JULY</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-spike" xlink:href="#icon-spike"/></svg></span>
+        <h3 class="name">타임</h3>
+        <p class="caption">courage, close to the ground</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">VIII · AUGUST</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-basil" xlink:href="#icon-basil"/></svg></span>
+        <h3 class="name">바질</h3>
+        <p class="caption">the height of the garden</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">IX · SEPTEMBER</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-comfrey" xlink:href="#icon-comfrey"/></svg></span>
+        <h3 class="name">컴프리</h3>
+        <p class="caption">mending, slowly</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">X · OCTOBER</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-lemonbalm" xlink:href="#icon-lemonbalm"/></svg></span>
+        <h3 class="name">레몬밤</h3>
+        <p class="caption">its scent clears as the air cools</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">XI · NOVEMBER</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-sage" xlink:href="#icon-sage"/></svg></span>
+        <h3 class="name">세이지</h3>
+        <p class="caption">wisdom, and old protection</p>
+      </article>
+      <article class="specimen" role="listitem">
+        <p class="month">XII · DECEMBER</p>
+        <span class="icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-holly" xlink:href="#icon-holly"/></svg></span>
+        <h3 class="name">호랑가시나무</h3>
+        <p class="caption">keeper of the longest night</p>
+      </article>
+    </div>
+    <p class="rail-note">← 옆으로 밀어서 열두 달을 넘겨보세요 →</p>
+  </section>
+
+  <section class="section" id="works-preview">
+    <div class="section-head">
+      <p class="eyebrow">From the Garden</p>
+      <div class="rule"></div>
+      <h2>지금 만나볼 수 있는 것들</h2>
+      <p>정원에서 자라난 이야기들이, 게임과 종이 위로 옮겨왔습니다</p>
+    </div>
+
+    <div class="works-grid">
+      <a class="work-card" href="works.html#game">
+        <div class="work-frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-cottage" xlink:href="#icon-cottage"/></svg></div>
+        <div class="work-body">
+          <p class="work-kicker">Browser Game</p>
+          <h3>고양이 약초사의 비밀 정원</h3>
+          <p>바바의 정원을 직접 가꾸는 브라우저 게임</p>
+          <span class="work-link">자세히 보기 →</span>
+        </div>
+      </a>
+      <a class="work-card" href="works.html#calendar">
+        <div class="work-frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-moonset" xlink:href="#icon-moonset"/></svg></div>
+        <div class="work-body">
+          <p class="work-kicker">Calendar 2027</p>
+          <h3>Moon Phase Calendar</h3>
+          <p>열두 달, 열두 개의 정원을 담은 문페이즈 캘린더</p>
+          <span class="work-link">자세히 보기 →</span>
+        </div>
+      </a>
+      <a class="work-card" href="works.html#diary">
+        <div class="work-frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-book" xlink:href="#icon-book"/></svg></div>
+        <div class="work-body">
+          <p class="work-kicker">Diary 2027</p>
+          <h3>Star Herbarium Diary</h3>
+          <p>표본첩을 닮은, 기록하는 정원 다이어리</p>
+          <span class="work-link">자세히 보기 →</span>
+        </div>
+      </a>
+      <a class="work-card" href="works.html#novella">
+        <div class="work-frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-quill" xlink:href="#icon-quill"/></svg></div>
+        <div class="work-body">
+          <p class="work-kicker">Novella</p>
+          <h3>바바 이야기</h3>
+          <p>정원 너머, 바바가 살아온 시간에 대하여</p>
+          <span class="work-link">곧 공개 →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-cta">
+      <h2>이야기가 더 궁금하신가요?</h2>
+      <a class="mail" href="mailto:hello@aethelcataria.com">hello@aethelcataria.com</a>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="world.html">세계관</a></li>
+          <li><a href="works.html">작품</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Tumblbug</a></li>
+          <li><a href="#">itch.io</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>© Aethel Cataria · 에델 카타리아</span>
+    <span>Illustrated &amp; written by Klara</span>
+  </div>
+</footer>
+
+</body>
+</html>
