@@ -273,11 +273,23 @@ a:focus-visible, button:focus-visible{
   color: var(--gold);
 }
 .specimen .icon{
-  width: 56px; height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 82px; height: 82px;
   margin: 14px auto 12px;
   color: var(--gold-soft);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(212,175,106,.45);
+  box-shadow: 0 0 0 4px rgba(212,175,106,.08);
 }
 .specimen .icon svg{ width: 100%; height: 100%; }
+.specimen .icon img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .specimen .name{
   font-family: var(--font-display-kr);
   font-size: 1.02rem;
