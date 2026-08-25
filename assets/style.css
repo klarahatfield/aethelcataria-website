@@ -560,6 +560,16 @@ a:focus-visible, button:focus-visible{
   flex-wrap: wrap;
   gap: 10px;
 }
+.footer-legal{
+  max-width: var(--max);
+  margin: 14px auto 0;
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  color: var(--parchment-dim);
+  opacity: .65;
+  letter-spacing: .02em;
+  text-align: center;
+}
 
 /* ---------- page intro (world / works headers) ---------- */
 .page-hero{
