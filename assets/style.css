@@ -431,6 +431,41 @@ a:focus-visible, button:focus-visible{
   .lore-entry{ grid-template-columns: 1fr; gap: 8px; }
 }
 
+/* ---------- author bio (home page) ---------- */
+.author{
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+.author-icon{
+  width: 30px; height: 30px;
+  margin: 0 auto 20px;
+  color: var(--sage);
+}
+.author h3{
+  font-family: var(--font-display-kr);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--parchment);
+  margin: 0 0 22px;
+}
+.author p{
+  color: var(--parchment-dim);
+  text-align: left;
+  margin: 0 0 14px;
+}
+.author p:last-of-type{ margin-bottom: 0; }
+.author .author-en{
+  display: block;
+  margin-top: 22px;
+  font-family: var(--font-body-en);
+  font-style: italic;
+  color: var(--parchment-dim);
+  opacity: .8;
+  font-size: .92rem;
+  text-align: center;
+}
+
 .apprentices{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
