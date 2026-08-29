@@ -121,6 +121,14 @@ a:focus-visible, button:focus-visible{
   color: var(--gold);
   border-color: var(--gold);
 }
+.site-nav a.lang-switch{
+  margin-left: clamp(4px, 1.5vw, 14px);
+  padding-left: clamp(14px, 3vw, 20px);
+  border-left: 1px solid rgba(212,175,106,.3);
+  border-bottom: 1px solid transparent;
+  opacity: .8;
+}
+.site-nav a.lang-switch:hover{ opacity: 1; }
 
 /* ---------- hero ---------- */
 .hero{
