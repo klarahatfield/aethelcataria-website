@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Song+Myung&family=Gowun+Batang:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Song+Myung&family=Gowun+Batang:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Special+Elite&family=Shippori+Mincho:wght@400;500;600;700&display=swap');
 
 :root{
   --night: #14172B;
@@ -19,8 +19,20 @@
   --font-body-en: 'EB Garamond', Georgia, serif;
   --font-mono: 'Special Elite', 'Courier New', monospace;
 
+  /* Japanese pairing — antique mincho serif, matches the herbarium/gothic mood
+     of Song Myung + Gowun Batang. Applied automatically on any <html lang="ja">
+     page via the override below, so jp/ pages can reuse .kr-title, .name,
+     .author h3, etc. as-is without new classes. */
+  --font-display-jp: 'Shippori Mincho', 'Song Myung', serif;
+  --font-body-jp: 'Shippori Mincho', 'Gowun Batang', serif;
+
   --max: 1180px;
   --edge: clamp(20px, 6vw, 72px);
+}
+
+html[lang="ja"]{
+  --font-display-kr: var(--font-display-jp);
+  --font-body-kr: var(--font-body-jp);
 }
 
 *, *::before, *::after{ box-sizing: border-box; }
@@ -129,6 +141,11 @@ a:focus-visible, button:focus-visible{
   opacity: .8;
 }
 .site-nav a.lang-switch:hover{ opacity: 1; }
+.site-nav a.lang-switch + a.lang-switch{
+  border-left: none;
+  padding-left: 0;
+  margin-left: 10px;
+}
 
 /* ---------- hero ---------- */
 .hero{
