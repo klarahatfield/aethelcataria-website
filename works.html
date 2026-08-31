@@ -25,6 +25,7 @@
     width: 52px; height: 52px;
     color: var(--gold);
   }
+  .work-detail-icon svg{ width: 100%; height: 100%; display: block; }
   .work-detail-kicker{
     font-family: var(--font-mono);
     font-size: .7rem; letter-spacing:.1em; text-transform: uppercase;
@@ -81,6 +82,35 @@
     border-top: 1px solid rgba(212,175,106,.15);
     max-width: 760px;
     margin: 0 auto 90px;
+  }
+  .work-detail.has-media{
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+  .work-detail-media{
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid rgba(212,175,106,.25);
+    box-shadow: 0 14px 34px rgba(0,0,0,.35);
+    position: sticky;
+    top: 110px;
+  }
+  .work-detail-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media (max-width: 720px){
+    .work-detail.has-media{ grid-template-columns: 1fr; }
+    .work-detail-media{
+      position: static;
+      max-width: 320px;
+      margin: 0 auto 8px;
+    }
   }
 </style>
 </head>
@@ -163,7 +193,9 @@
 
     <hr class="div">
 
-    <div class="work-detail" id="calendar">
+    <div class="work-detail has-media" id="calendar">
+      <div class="work-detail-media"><img src="assets/images/work-calendar-detail.jpg" alt="벽에 걸린 Moon Phase Calendar 2027 실제 제작 사진"></div>
+      <div class="work-detail-text">
       <div class="work-detail-head">
         <span class="work-detail-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-moonset2" xlink:href="#icon-moonset2"/></svg></span>
         <div>
@@ -181,11 +213,14 @@
       <div class="work-detail-cta">
         <a class="btn btn-gold" href="https://tumblbug.com/u/herbalist-cat-garden" target="_blank" rel="noopener">텀블벅에서 알림 받기</a>
       </div>
+      </div>
     </div>
 
     <hr class="div">
 
-    <div class="work-detail" id="diary">
+    <div class="work-detail has-media" id="diary">
+      <div class="work-detail-media"><img src="assets/images/work-diary.jpg" alt="Star Herbarium Diary 2027 표지"></div>
+      <div class="work-detail-text">
       <div class="work-detail-head">
         <span class="work-detail-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-book2" xlink:href="#icon-book2"/></svg></span>
         <div>
@@ -204,11 +239,14 @@
       <div class="work-detail-cta">
         <a class="btn btn-gold" href="https://tumblbug.com/u/herbalist-cat-garden" target="_blank" rel="noopener">텀블벅에서 알림 받기</a>
       </div>
+      </div>
     </div>
 
     <hr class="div">
 
-    <div class="work-detail" id="stickers">
+    <div class="work-detail has-media" id="stickers">
+      <div class="work-detail-media"><img src="assets/images/work-sticker.jpg" alt="정원 다꾸 스티커 세트 - 문페이즈 시트"></div>
+      <div class="work-detail-text">
       <div class="work-detail-head">
         <span class="work-detail-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-sticker2" xlink:href="#icon-sticker2"/></svg></span>
         <div>
@@ -225,6 +263,7 @@
       </ul>
       <div class="work-detail-cta">
         <a class="btn btn-gold" href="https://tumblbug.com/u/herbalist-cat-garden" target="_blank" rel="noopener">텀블벅에서 알림 받기</a>
+      </div>
       </div>
     </div>
 
