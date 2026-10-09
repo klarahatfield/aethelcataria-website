@@ -2,7 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aethelcataria.com/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/world.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/works.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/shop.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/en/index.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/en/world.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/en/works.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/en/shop.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://aethelcataria.com/jp/index.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.60</priority>
   </url>
 </urlset>

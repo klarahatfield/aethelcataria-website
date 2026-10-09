@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aethel Cataria — A Dark, Cosy Fantasy</title>
-<meta name="description" content="Aethel Cataria: a three-hundred-year-old garden, a ginger cat alchemist named Baba, and the debt that finally came looking for him. A dark, cosy fantasy world in games, art, and a forthcoming novel.">
+<meta name="description" content="Aethel Cataria: a three-hundred-year-old garden, a ginger cat alchemist named Baba, and the debt that finally came looking for her. A dark, cosy fantasy world in games, art, and a novel.">
 <link rel="alternate" hreflang="ko" href="https://aethelcataria.com/index.html">
 <link rel="alternate" hreflang="en" href="https://aethelcataria.com/en/index.html">
 <link rel="alternate" hreflang="ja" href="https://aethelcataria.com/jp/index.html">
@@ -66,6 +66,14 @@
 <main>
 
   <section class="hero">
+    <div class="hero-video" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/hero-forest-poster.jpg">
+        <source src="../assets/video/hero-forest-sm.mp4" type="video/mp4" media="(max-width: 700px)">
+        <source src="../assets/video/hero-forest-sm.webm" type="video/webm" media="(max-width: 700px)">
+        <source src="../assets/video/hero-forest.mp4" type="video/mp4">
+        <source src="../assets/video/hero-forest.webm" type="video/webm">
+      </video>
+    </div>
     <div class="stars" aria-hidden="true">
       <span style="top:12%;left:8%"></span>
       <span style="top:22%;left:88%"></span>
@@ -77,19 +85,26 @@
 
     <svg class="moon-arc" viewBox="0 0 600 130" aria-hidden="true">
       <path d="M40,90 Q300,-10 560,90" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".35"/>
-      <g opacity=".45"><clipPath id="mp0"><circle cx="40" cy="82" r="9"/></clipPath><circle cx="40" cy="82" r="9" fill="#E9D3A3"/><circle cx="40" cy="82" r="9" fill="#14172B" clip-path="url(#mp0)"/><circle cx="40" cy="82" r="9" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
-      <g opacity=".68"><clipPath id="mp1"><circle cx="127" cy="56" r="12"/></clipPath><circle cx="127" cy="56" r="12" fill="#E9D3A3"/><circle cx="119" cy="56" r="12" fill="#14172B" clip-path="url(#mp1)"/><circle cx="127" cy="56" r="12" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
-      <g opacity=".86"><clipPath id="mp2"><circle cx="213" cy="36" r="15"/></clipPath><circle cx="213" cy="36" r="15" fill="#E9D3A3"/><circle cx="193" cy="36" r="15" fill="#14172B" clip-path="url(#mp2)"/><circle cx="213" cy="36" r="15" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
-      <g opacity="1"><clipPath id="mp3"><circle cx="300" cy="24" r="19"/></clipPath><circle cx="300" cy="24" r="19" fill="#E9D3A3"/><circle cx="262" cy="24" r="19" fill="#14172B" clip-path="url(#mp3)"/><circle cx="300" cy="24" r="19" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
-      <g opacity=".86"><clipPath id="mp4"><circle cx="387" cy="36" r="15"/></clipPath><circle cx="387" cy="36" r="15" fill="#E9D3A3"/><circle cx="407" cy="36" r="15" fill="#14172B" clip-path="url(#mp4)"/><circle cx="387" cy="36" r="15" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
-      <g opacity=".68"><clipPath id="mp5"><circle cx="473" cy="56" r="12"/></clipPath><circle cx="473" cy="56" r="12" fill="#E9D3A3"/><circle cx="481" cy="56" r="12" fill="#14172B" clip-path="url(#mp5)"/><circle cx="473" cy="56" r="12" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
-      <g opacity=".45"><clipPath id="mp6"><circle cx="560" cy="82" r="9"/></clipPath><circle cx="560" cy="82" r="9" fill="#E9D3A3"/><circle cx="560" cy="82" r="9" fill="#14172B" clip-path="url(#mp6)"/><circle cx="560" cy="82" r="9" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
+      <g opacity=".45"><mask id="mm0"><circle cx="40" cy="82" r="9" fill="#fff"/><circle cx="40" cy="82" r="9" fill="#000"/></mask>
+        <circle cx="40" cy="82" r="9" fill="#E9D3A3" mask="url(#mm0)"/><circle cx="40" cy="82" r="9" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
+      <g opacity=".68"><mask id="mm1"><circle cx="127" cy="56" r="12" fill="#fff"/><circle cx="119" cy="56" r="12" fill="#000"/></mask>
+        <circle cx="127" cy="56" r="12" fill="#E9D3A3" mask="url(#mm1)"/><circle cx="127" cy="56" r="12" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
+      <g opacity=".86"><mask id="mm2"><circle cx="213" cy="36" r="15" fill="#fff"/><circle cx="193" cy="36" r="15" fill="#000"/></mask>
+        <circle cx="213" cy="36" r="15" fill="#E9D3A3" mask="url(#mm2)"/><circle cx="213" cy="36" r="15" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
+      <g opacity="1"><mask id="mm3"><circle cx="300" cy="24" r="19" fill="#fff"/><circle cx="262" cy="24" r="19" fill="#000"/></mask>
+        <circle cx="300" cy="24" r="19" fill="#E9D3A3" mask="url(#mm3)"/><circle cx="300" cy="24" r="19" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
+      <g opacity=".86"><mask id="mm4"><circle cx="387" cy="36" r="15" fill="#fff"/><circle cx="407" cy="36" r="15" fill="#000"/></mask>
+        <circle cx="387" cy="36" r="15" fill="#E9D3A3" mask="url(#mm4)"/><circle cx="387" cy="36" r="15" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
+      <g opacity=".68"><mask id="mm5"><circle cx="473" cy="56" r="12" fill="#fff"/><circle cx="481" cy="56" r="12" fill="#000"/></mask>
+        <circle cx="473" cy="56" r="12" fill="#E9D3A3" mask="url(#mm5)"/><circle cx="473" cy="56" r="12" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
+      <g opacity=".45"><mask id="mm6"><circle cx="560" cy="82" r="9" fill="#fff"/><circle cx="560" cy="82" r="9" fill="#000"/></mask>
+        <circle cx="560" cy="82" r="9" fill="#E9D3A3" mask="url(#mm6)"/><circle cx="560" cy="82" r="9" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/></g>
     </svg>
 
     <p class="hero-eyebrow">Herbalist Cat's Secret Garden Universe</p>
     <h1>Aethel&nbsp;Cataria</h1>
     <p class="tagline">Old magic, grown slow, under a patient moon.</p>
-    <p class="lede">A bespectacled, ginger-furred cat alchemist named Baba tends a garden that has kept its own time for three hundred years — by the moon, not the clock. He is waiting for you, the way old things wait: unhurried, and in no rush to tell you everything at once. This is a dark, cosy fantasy about staying somewhere long enough to become part of it.</p>
+    <p class="lede">A bespectacled, ginger-furred cat alchemist named Baba tends a garden that has kept its own time for three hundred years — by the moon, not the clock. She is waiting for you, the way old things wait: unhurried, and in no rush to tell you everything at once. This is a dark, cosy fantasy about staying somewhere long enough to become part of it.</p>
     <div class="hero-actions">
       <a class="btn btn-gold" href="world.html">Explore the World</a>
       <a class="btn btn-outline" href="works.html">See the Works</a>
@@ -230,9 +245,9 @@
         <div class="work-frame"><img src="../assets/images/work-novella.jpg" alt="Illustration for Baba's novel"></div>
         <div class="work-body">
           <p class="work-kicker">Novel</p>
-          <h3>Baba's Story</h3>
-          <p>Past the garden gate — the three hundred years he doesn't talk about</p>
-          <span class="work-link">Coming soon →</span>
+          <h3>Aethel Cataria</h3>
+          <p>Past the garden gate — the three hundred years she doesn't talk about</p>
+          <span class="work-link">Now serialising in Korean →</span>
         </div>
       </a>
     </div>
@@ -250,7 +265,7 @@
       <span class="author-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-quill" xlink:href="#icon-quill"/></svg></span>
       <h3>Klara Hatfield</h3>
       <p>I write under the name Klara Hatfield. This is where I keep an account of the garden, and of the ones who live in it.</p>
-      <p>The whole world began as a handful of illustrations, before it grew too large for pictures alone to hold. <em>The Herbalist Cat's Secret Garden</em> is the first book to grow out of it.</p>
+      <p>The whole world began as a handful of illustrations, before it grew too large for pictures alone to hold. <em>Aethel Cataria</em>, a novel, is the first book to grow out of it.</p>
       <p>Before anything else, I try to get the small things right — three young paws mishandling a mortar and pestle, the particular hush of mist over a lagoon at dawn, the quiet, patient tick of a heart kept warm in a drawer. The story always comes after.</p>
       <p>This book doesn't end the garden's story. Somewhere beneath the western woods, a few more are still waiting their turn.</p>
     </div>

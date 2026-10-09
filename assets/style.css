@@ -209,6 +209,34 @@ a:focus-visible, button:focus-visible{
   text-align: center;
   overflow: hidden;
 }
+/* hero background video (prologue forest) */
+.hero-video{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .5;
+}
+.hero-video::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(20,23,43,.25) 0%, rgba(20,23,43,.7) 75%),
+    linear-gradient(180deg, rgba(20,23,43,.35) 0%, rgba(20,23,43,.15) 50%, var(--night) 100%);
+}
+.hero .stars{ z-index: 1; }
+.hero > :not(.hero-video):not(.stars){ position: relative; z-index: 2; }
+@media (prefers-reduced-motion: reduce){
+  .hero-video video{ display: none; }
+  .hero-video{ background: url("video/hero-forest-poster.jpg") center / cover no-repeat; opacity: .5; }
+}
 .moon-arc{
   width: min(560px, 84vw);
   margin: 0 auto 34px;

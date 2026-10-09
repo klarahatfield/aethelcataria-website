@@ -165,6 +165,14 @@
 <main>
 
   <section class="hero">
+    <div class="hero-video" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-forest-poster.jpg">
+        <source src="assets/video/hero-forest-sm.mp4" type="video/mp4" media="(max-width: 700px)">
+        <source src="assets/video/hero-forest-sm.webm" type="video/webm" media="(max-width: 700px)">
+        <source src="assets/video/hero-forest.mp4" type="video/mp4">
+        <source src="assets/video/hero-forest.webm" type="video/webm">
+      </video>
+    </div>
     <div class="stars" aria-hidden="true">
       <span style="top:12%;left:8%"></span>
       <span style="top:22%;left:88%"></span>
@@ -178,51 +186,44 @@
       <path d="M40,90 Q300,-10 560,90" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".35"/>
 
       <g opacity=".45">
-        <clipPath id="mp0"><circle cx="40" cy="82" r="9"/></clipPath>
-        <circle cx="40" cy="82" r="9" fill="#E9D3A3"/>
-        <circle cx="40" cy="82" r="9" fill="#14172B" clip-path="url(#mp0)"/>
+        <mask id="mm0"><circle cx="40" cy="82" r="9" fill="#fff"/><circle cx="40" cy="82" r="9" fill="#000"/></mask>
+        <circle cx="40" cy="82" r="9" fill="#E9D3A3" mask="url(#mm0)"/>
         <circle cx="40" cy="82" r="9" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/>
       </g>
 
       <g opacity=".68">
-        <clipPath id="mp1"><circle cx="127" cy="56" r="12"/></clipPath>
-        <circle cx="127" cy="56" r="12" fill="#E9D3A3"/>
-        <circle cx="119" cy="56" r="12" fill="#14172B" clip-path="url(#mp1)"/>
+        <mask id="mm1"><circle cx="127" cy="56" r="12" fill="#fff"/><circle cx="119" cy="56" r="12" fill="#000"/></mask>
+        <circle cx="127" cy="56" r="12" fill="#E9D3A3" mask="url(#mm1)"/>
         <circle cx="127" cy="56" r="12" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/>
       </g>
 
       <g opacity=".86">
-        <clipPath id="mp2"><circle cx="213" cy="36" r="15"/></clipPath>
-        <circle cx="213" cy="36" r="15" fill="#E9D3A3"/>
-        <circle cx="193" cy="36" r="15" fill="#14172B" clip-path="url(#mp2)"/>
+        <mask id="mm2"><circle cx="213" cy="36" r="15" fill="#fff"/><circle cx="193" cy="36" r="15" fill="#000"/></mask>
+        <circle cx="213" cy="36" r="15" fill="#E9D3A3" mask="url(#mm2)"/>
         <circle cx="213" cy="36" r="15" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/>
       </g>
 
       <g opacity="1">
-        <clipPath id="mp3"><circle cx="300" cy="24" r="19"/></clipPath>
-        <circle cx="300" cy="24" r="19" fill="#E9D3A3"/>
-        <circle cx="262" cy="24" r="19" fill="#14172B" clip-path="url(#mp3)"/>
+        <mask id="mm3"><circle cx="300" cy="24" r="19" fill="#fff"/><circle cx="262" cy="24" r="19" fill="#000"/></mask>
+        <circle cx="300" cy="24" r="19" fill="#E9D3A3" mask="url(#mm3)"/>
         <circle cx="300" cy="24" r="19" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/>
       </g>
 
       <g opacity=".86">
-        <clipPath id="mp4"><circle cx="387" cy="36" r="15"/></clipPath>
-        <circle cx="387" cy="36" r="15" fill="#E9D3A3"/>
-        <circle cx="407" cy="36" r="15" fill="#14172B" clip-path="url(#mp4)"/>
+        <mask id="mm4"><circle cx="387" cy="36" r="15" fill="#fff"/><circle cx="407" cy="36" r="15" fill="#000"/></mask>
+        <circle cx="387" cy="36" r="15" fill="#E9D3A3" mask="url(#mm4)"/>
         <circle cx="387" cy="36" r="15" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/>
       </g>
 
       <g opacity=".68">
-        <clipPath id="mp5"><circle cx="473" cy="56" r="12"/></clipPath>
-        <circle cx="473" cy="56" r="12" fill="#E9D3A3"/>
-        <circle cx="481" cy="56" r="12" fill="#14172B" clip-path="url(#mp5)"/>
+        <mask id="mm5"><circle cx="473" cy="56" r="12" fill="#fff"/><circle cx="481" cy="56" r="12" fill="#000"/></mask>
+        <circle cx="473" cy="56" r="12" fill="#E9D3A3" mask="url(#mm5)"/>
         <circle cx="473" cy="56" r="12" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/>
       </g>
 
       <g opacity=".45">
-        <clipPath id="mp6"><circle cx="560" cy="82" r="9"/></clipPath>
-        <circle cx="560" cy="82" r="9" fill="#E9D3A3"/>
-        <circle cx="560" cy="82" r="9" fill="#14172B" clip-path="url(#mp6)"/>
+        <mask id="mm6"><circle cx="560" cy="82" r="9" fill="#fff"/><circle cx="560" cy="82" r="9" fill="#000"/></mask>
+        <circle cx="560" cy="82" r="9" fill="#E9D3A3" mask="url(#mm6)"/>
         <circle cx="560" cy="82" r="9" fill="none" stroke="#D4AF6A" stroke-width="1" opacity=".8"/>
       </g>
     </svg>
@@ -369,12 +370,12 @@
         </div>
       </a>
       <a class="work-card" href="works.html#novella">
-        <div class="work-frame"><img src="assets/images/work-novella.jpg" alt="바바 이야기 장편소설 이미지"></div>
+        <div class="work-frame"><img src="assets/images/work-novella.jpg" alt="장편소설 에델 카타리아 이미지"></div>
         <div class="work-body">
           <p class="work-kicker">Novel</p>
-          <h3>바바 이야기</h3>
+          <h3>에델 카타리아</h3>
           <p>정원 너머, 바바가 살아온 시간에 대하여</p>
-          <span class="work-link">곧 공개 →</span>
+          <span class="work-link">브런치 연재 중 →</span>
         </div>
       </a>
     </div>
@@ -392,7 +393,7 @@
       <span class="author-icon"><svg xmlns:xlink="http://www.w3.org/1999/xlink"><use href="#icon-quill" xlink:href="#icon-quill"/></svg></span>
       <h3>Klara Hatfield</h3>
       <p>클라라 햇필드(Klara Hatfield)라는 이름으로, 이 정원과 그 안에 사는 이들의 이야기를 기록하고 있습니다.</p>
-      <p>이 세계는 원래 몇 장의 그림에서 시작되었습니다. 어느 순간부터 그림만으로는 다 담을 수 없는 이야기들이 생겨났고, 『약초사 고양이의 비밀 정원』은 그렇게 태어난 첫 책입니다.</p>
+      <p>이 세계는 원래 몇 장의 그림에서 시작되었습니다. 어느 순간부터 그림만으로는 다 담을 수 없는 이야기들이 생겨났고, 장편소설 『에델 카타리아』는 그렇게 태어난 첫 책입니다.</p>
       <p>세 아이가 앞발로 절구를 서툴게 쥐는 소리, 라군 위에 낮게 깔리는 안개 — 이런 것들을 먼저 정직하게 옮겨 적은 뒤에야, 이야기는 그다음에 따라옵니다.</p>
       <p>이 정원의 이야기는 1권으로 끝나지 않습니다. 보관고 안에는 아직 몇 개의 이야기가 더 남아 있으니까요.</p>
       <span class="author-en">Klara Hatfield writes down what the garden remembers.</span>
@@ -448,7 +449,7 @@
 <script data-goatcounter="https://aethelcataria.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<!-- ============ Tumblbug 알림 팝업 (방문자당 하루 1회 노출) ============ -->
+<!-- ============ Tumblbug 알림 팝업 (방문자당 하루 1회 노출, 펀딩 마감 후 자동으로 숨김) ============ -->
 <div class="tb-popup-overlay" id="tbPopupOverlay">
   <div class="tb-popup-card" role="dialog" aria-modal="true" aria-labelledby="tbPopupTitle">
     <button class="tb-popup-close" id="tbPopupClose" aria-label="닫기">×</button>
@@ -463,12 +464,19 @@
 <script>
 (function () {
   try {
+    // 텀블벅 펀딩 마감 시각(한국 시간). 이 시각이 지나면 팝업이 아예 뜨지 않습니다.
+    var FUNDING_END = new Date('2026-10-16T00:00:00+09:00');
+    var overlay = document.getElementById('tbPopupOverlay');
+    if (Date.now() >= FUNDING_END.getTime()) {
+      if (overlay) overlay.parentNode.removeChild(overlay);
+      return;
+    }
     var KEY = 'tbPopupLastShown_bababook';
-    var today = new Date().toISOString().slice(0, 10);
+    var d = new Date();
+    var today = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); // 방문자 기준 날짜
     if (localStorage.getItem(KEY) === today) return;
     setTimeout(function () {
-      var overlay = document.getElementById('tbPopupOverlay');
-      if (!overlay) return;
+      if (!overlay || !overlay.isConnected) return;
       overlay.classList.add('is-visible');
       try { localStorage.setItem(KEY, today); } catch (e) {}
       function close(){ overlay.classList.remove('is-visible'); }
