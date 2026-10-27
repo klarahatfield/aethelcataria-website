@@ -547,10 +547,22 @@ a:focus-visible, button:focus-visible{
   text-align: center;
 }
 .author-icon{
-  width: 30px; height: 30px;
+  display: block;
+  width: 44px; height: 44px;
   margin: 0 auto 20px;
   color: var(--sage);
 }
+.author-art{
+  display: block;
+  width: 180px; height: 180px;
+  margin: 0 auto 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(212,175,106,.4);
+  box-shadow: 0 0 0 6px rgba(212,175,106,.06);
+}
+.author-icon svg,
+.apprentice .glyph svg{ display: block; width: 100%; height: 100%; }
 .author h3{
   font-family: var(--font-display-kr);
   font-weight: 400;
