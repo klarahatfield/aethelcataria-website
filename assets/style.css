@@ -535,6 +535,7 @@ a:focus-visible, button:focus-visible{
   opacity: .8;
   font-size: .92rem;
 }
+.lore-entry > div{ min-width: 0; }
 @media (max-width: 560px){
   .lore-entry{ grid-template-columns: 1fr; gap: 8px; }
 }
@@ -585,6 +586,22 @@ a:focus-visible, button:focus-visible{
   text-align: center;
   padding: 22px 14px;
   border: 1px solid rgba(212,175,106,.18);
+}
+.apprentice .portrait{
+  display: block;
+  width: 120px; height: 120px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(212,175,106,.35);
+}
+.lore-portrait{
+  display: block;
+  width: 150px; height: 150px;
+  margin: 0 0 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(212,175,106,.35);
 }
 .apprentice .glyph{
   width: 34px; height: 34px;
@@ -886,3 +903,13 @@ a:focus-visible, button:focus-visible{
   cursor: pointer;
 }
 .tb-popup-dismiss:hover{ color: var(--gold); }
+
+/* character portraits — mobile (2026-10-27) */
+@media (max-width: 560px){
+  .apprentices{ grid-template-columns: 1fr; gap: 14px; }
+  .apprentice{ display: grid; grid-template-columns: 88px 1fr; align-items: center; gap: 0 16px; text-align: left; padding: 16px; }
+  .apprentice .portrait{ width: 88px; height: 88px; margin: 0; grid-row: span 2; }
+  .apprentice h4{ align-self: end; }
+  .apprentice p{ align-self: start; }
+  .lore-portrait{ width: 120px; height: 120px; }
+}
