@@ -925,3 +925,7 @@ a:focus-visible, button:focus-visible{
   .apprentice p{ align-self: start; }
   .lore-portrait{ width: 120px; height: 120px; }
 }
+
+/* newsletter (2026-10-28) */
+.newsletter-cta{ text-align: center; margin-top: 8px; }
+.newsletter-note{ margin-top: 16px; font-size: .8rem; color: var(--parchment-dim); opacity: .75; }
