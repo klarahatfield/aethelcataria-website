@@ -929,3 +929,4 @@ a:focus-visible, button:focus-visible{
 /* newsletter (2026-10-28) */
 .newsletter-cta{ text-align: center; margin-top: 8px; }
 .newsletter-note{ margin-top: 16px; font-size: .8rem; color: var(--parchment-dim); opacity: .75; }
+.footer-sub{ margin: 0 0 18px; font-size: .9rem; color: var(--parchment-dim); max-width: 360px; line-height: 1.7; }
