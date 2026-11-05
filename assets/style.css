@@ -930,3 +930,21 @@ a:focus-visible, button:focus-visible{
 .newsletter-cta{ text-align: center; margin-top: 8px; }
 .newsletter-note{ margin-top: 16px; font-size: .8rem; color: var(--parchment-dim); opacity: .75; }
 .footer-sub{ margin: 0 0 18px; font-size: .9rem; color: var(--parchment-dim); max-width: 360px; line-height: 1.7; }
+
+/* kakao channel (2026-11-05) */
+.kakao-float{
+  position: fixed; right: 20px; bottom: 20px; z-index: 900;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 18px 11px 14px; border-radius: 999px;
+  background: #FEE500; color: #191919 !important;
+  font-family: var(--font-body-kr); font-size: .9rem; font-weight: 600;
+  text-decoration: none; letter-spacing: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.kakao-float:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.4); }
+.kakao-float svg{ width: 20px; height: 20px; flex: none; }
+@media (max-width: 600px){
+  .kakao-float{ right: 14px; bottom: 14px; padding: 12px; }
+  .kakao-float span{ display: none; }
+}
