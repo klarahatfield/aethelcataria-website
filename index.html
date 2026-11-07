@@ -468,32 +468,44 @@
 <script data-goatcounter="https://aethelcataria.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<!-- ============ Tumblbug 알림 팝업 (방문자당 하루 1회 노출, 펀딩 마감 후 자동으로 숨김) ============ -->
+<!-- ============ Tumblbug 알림 팝업: 비밀정원 (방문자당 하루 1회 노출) ============
+     · 11/20(금) 18:00 전: 공개예정 + 알림 신청
+     · 11/20 18:00 ~ 12/21: 펀딩 진행 중 + 후원하기
+     · 12/22 00:00 이후: 자동으로 숨김
+-->
 <div class="tb-popup-overlay" id="tbPopupOverlay">
   <div class="tb-popup-card" role="dialog" aria-modal="true" aria-labelledby="tbPopupTitle">
     <button class="tb-popup-close" id="tbPopupClose" aria-label="닫기">×</button>
-    <div class="tb-popup-photo"><img src="assets/images/tumblbug-notify-baba.jpg" alt="약초사 고양이 바바"></div>
-    <p class="tb-popup-eyebrow">Tumblbug · 펀딩 진행 중</p>
-    <h2 id="tbPopupTitle" class="tb-popup-title">달빛 아래,<br>약초사 고양이 바바의 비밀노트</h2>
-    <p class="tb-popup-desc">2027 달 위상 일러스트 캘린더 · 다이어리 · 스티커<br>포근한 판타지 약초도감, 지금 텀블벅에서 만나보세요.</p>
-    <a class="tb-popup-cta" href="https://tumblbug.com/herbalist-cat-garden" target="_blank" rel="noopener" id="tbPopupCta">텀블벅에서 후원하기 →</a>
+    <div class="tb-popup-photo"><img src="assets/images/tumblbug-notify-garden.jpg" alt="『약초사 고양이의 비밀정원』 표지 속 정원 오두막"></div>
+    <p class="tb-popup-eyebrow" id="tbPopupEyebrow">Tumblbug · 공개예정</p>
+    <h2 id="tbPopupTitle" class="tb-popup-title">삼백 살 약초사<br>고양이의 비밀정원</h2>
+    <p class="tb-popup-desc">판타지 소설 『에델 카타리아 1』<br>펜화풍 일러스트 30컷<br>정원지도 무릎담요 · 머그컵</p>
+    <p class="tb-popup-meta" id="tbPopupMeta">11월 20일(금) 오후 6시 오픈</p>
+    <a class="tb-popup-cta" href="https://tumblbug.com/aethelcataria" target="_blank" rel="noopener" id="tbPopupCta">텀블벅에서 알림 신청하기 →</a>
     <button class="tb-popup-dismiss" id="tbPopupDismiss">오늘은 그만 보기</button>
   </div>
 </div>
 <script>
 (function () {
   try {
-    // 텀블벅 펀딩 마감 시각(한국 시간). 이 시각이 지나면 팝업이 아예 뜨지 않습니다.
-    var FUNDING_END = new Date('2026-10-16T00:00:00+09:00');
+    // 한국 시간 기준
+    var FUNDING_START = new Date('2026-11-20T18:00:00+09:00'); // 펀딩 오픈
+    var FUNDING_END   = new Date('2026-12-22T00:00:00+09:00'); // 12/21 마감 → 이후 팝업 숨김
     var overlay = document.getElementById('tbPopupOverlay');
-    if (Date.now() >= FUNDING_END.getTime()) {
+    var now = Date.now();
+    if (now >= FUNDING_END.getTime()) {
       if (overlay) overlay.parentNode.removeChild(overlay);
       return;
     }
-    var KEY = 'tbPopupLastShown_bababook';
+    if (now >= FUNDING_START.getTime()) {
+      document.getElementById('tbPopupEyebrow').textContent = 'Tumblbug · 펀딩 진행 중';
+      document.getElementById('tbPopupMeta').textContent = '12월 21일(월) 마감';
+      document.getElementById('tbPopupCta').textContent = '텀블벅에서 후원하기 →';
+    }
+    var KEY = 'tbPopupLastShown_garden';
     var d = new Date();
     var today = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); // 방문자 기준 날짜
-    if (localStorage.getItem(KEY) === today) return;
+    try { if (localStorage.getItem(KEY) === today) return; } catch (e) {}
     setTimeout(function () {
       if (!overlay || !overlay.isConnected) return;
       overlay.classList.add('is-visible');
