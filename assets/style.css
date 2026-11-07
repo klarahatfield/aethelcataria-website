@@ -786,6 +786,7 @@ a:focus-visible, button:focus-visible{
 }
 @media (max-width: 460px){
   .work-detail-head{ flex-direction: column; }
+  .site-nav{ gap: 13px; }
 }
 
 /* ---------- Tumblbug 알림 팝업 ---------- */
