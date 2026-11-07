@@ -17,7 +17,8 @@
   --font-display-kr: 'Song Myung', 'Playfair Display', serif;
   --font-body-kr: 'Gowun Batang', 'Noto Serif KR', serif;
   --font-body-en: 'EB Garamond', Georgia, serif;
-  --font-mono: 'Special Elite', 'Courier New', monospace;
+  /* 영문은 타자기체, 한글·일본어 글자는 고운바탕·시포리 명조로 이어서 표시 (2026-11-07) */
+  --font-mono: 'Special Elite', 'Gowun Batang', 'Shippori Mincho', 'Noto Serif KR', 'Courier New', serif;
 
   /* Japanese pairing — antique mincho serif, matches the herbarium/gothic mood
      of Song Myung + Gowun Batang. Applied automatically on any <html lang="ja">
@@ -117,9 +118,13 @@ a:focus-visible, button:focus-visible{
 .site-nav{
   display: flex;
   font-family: var(--font-mono);
-  font-size: .78rem;
+  font-size: .88rem;
   letter-spacing: .05em;
 }
+/* 한글 페이지: 메뉴·버튼의 한글 자간을 조금 좁게 (2026-11-07) */
+html[lang="ko"] .site-nav,
+html[lang="ko"] .btn,
+html[lang="ko"] .tb-popup-cta{ letter-spacing: .02em; }
 .site-nav a{
   text-decoration: none;
   color: var(--parchment-dim);
@@ -778,7 +783,7 @@ a:focus-visible, button:focus-visible{
 /* ---------- responsive ---------- */
 @media (max-width: 640px){
   .site-header .wrap{ flex-wrap: wrap; row-gap: 14px; }
-  .site-nav{ gap: 16px; row-gap: 10px; width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+  .site-nav{ gap: 16px; row-gap: 10px; width: 100%; justify-content: flex-start; flex-wrap: wrap; font-size: .82rem; }
   .hero{ padding-top: 56px; padding-bottom: 64px; }
   .section{ padding-top: 60px; padding-bottom: 60px; }
   .specimen{ flex-basis: 148px; }
