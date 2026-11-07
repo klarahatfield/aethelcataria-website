@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>별의 약초도감 다이어리 2027 · Star Herbarium Diary · Aethel Cataria</title>
+<meta name="description" content="달 위상이 표시된 달력과 열두 달의 약초 노트를 담은 A5 하드커버 2027 다이어리. 고양이 약초사 바바의 정원에서 온 148쪽의 기록장, 별의 약초도감 다이어리.">
+<meta property="og:type" content="product">
+<meta property="og:title" content="별의 약초도감 다이어리 2027 · Star Herbarium Diary">
+<meta property="og:description" content="달이 떠 있는 달력, 달마다 한 종의 약초. 바바의 정원에서 온 2027 다이어리.">
+<meta property="og:image" content="https://aethelcataria.com/assets/images/diary/diary-cover-angle.jpg">
+<meta property="og:url" content="https://aethelcataria.com/diary.html">
+<link rel="canonical" href="https://aethelcataria.com/diary.html">
+<link rel="stylesheet" href="assets/style.css?v=20261028b">
+<style>
+  .book-top{ max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 52px; align-items: start; }
+  .book-cover img{ width: 100%; display: block; border-radius: 4px; box-shadow: 0 26px 60px rgba(0,0,0,.45); }
+  .book-info .kicker{ font-family: var(--font-mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin: 0 0 12px; }
+  .book-info h2{ font-family: var(--font-display-kr); font-weight: 400; font-size: clamp(1.7rem, 3.4vw, 2.3rem); color: var(--parchment); margin: 0 0 6px; line-height: 1.35; }
+  .book-info .sub{ font-family: var(--font-display-en); font-style: italic; color: var(--gold-soft); margin: 0 0 24px; }
+  .book-info p.body{ color: var(--parchment-dim); line-height: 1.9; margin: 0 0 16px; }
+  .book-info .tag{ display: inline-block; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .05em; color: var(--parchment-dim); border: 1px solid rgba(212,175,106,.3); border-radius: 2px; padding: 5px 10px; margin: 0 6px 8px 0; }
+  .book-cta{ display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+  .book-cta .note{ width: 100%; font-size: .82rem; color: var(--parchment-dim); margin: 2px 0 0; }
+  .story{ max-width: 680px; margin: 0 auto; color: var(--parchment-dim); line-height: 1.95; text-align: center; }
+  .story p{ margin: 0 0 18px; }
+  .story strong{ color: var(--parchment); font-weight: 400; }
+  .feat{ max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .feat div{ border: 1px solid rgba(212,175,106,.22); border-radius: 2px; padding: 22px 22px 20px; }
+  .feat .n{ font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .1em; }
+  .feat h3{ font-family: var(--font-display-kr); font-weight: 400; font-size: 1.12rem; color: var(--parchment); margin: 8px 0 8px; }
+  .feat p{ margin: 0; color: var(--parchment-dim); line-height: 1.8; font-size: .92rem; }
+  .ph-grid{ max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .ph-grid figure{ margin: 0; }
+  .ph-grid img{ width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 2px; }
+  .ph-grid figcaption{ font-size: .8rem; color: var(--parchment-dim); text-align: center; margin-top: 10px; }
+  .ph-note{ text-align: center; font-size: .78rem; color: var(--parchment-dim); margin: 22px 0 0; }
+  .parts{ max-width: 760px; margin: 0 auto; display: grid; gap: 0; border-top: 1px solid rgba(212,175,106,.3); }
+  .parts div{ display: grid; grid-template-columns: 170px 1fr; gap: 18px; padding: 16px 4px; border-bottom: 1px solid rgba(212,175,106,.15); }
+  .parts dt{ font-family: var(--font-display-kr); color: var(--parchment); }
+  .parts dt small{ display: block; font-family: var(--font-mono); font-size: .7rem; color: var(--gold); letter-spacing: .06em; margin-top: 4px; }
+  .parts dd{ margin: 0; color: var(--parchment-dim); line-height: 1.85; }
+  .spec{ max-width: 680px; margin: 0 auto; border-top: 1px solid rgba(212,175,106,.3); }
+  .spec div{ display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 13px 4px; border-bottom: 1px solid rgba(212,175,106,.15); }
+  .spec dt{ font-family: var(--font-mono); font-size: .74rem; letter-spacing: .06em; color: var(--gold); padding-top: 3px; }
+  .spec dd{ margin: 0; color: var(--parchment); }
+  .page-hero h1, .page-hero .desc, .book-info h2, .book-info p.body, .book-cta .note, .story, .feat, .parts, .spec dd{ word-break: keep-all; }
+  @media (max-width: 860px){ .feat{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 760px){
+    .book-top{ grid-template-columns: 1fr; gap: 34px; }
+    .book-cover{ max-width: 280px; margin: 0 auto; }
+    .ph-grid{ grid-template-columns: 1fr; gap: 14px; }
+    .parts div{ grid-template-columns: 1fr; gap: 6px; }
+    .spec div{ grid-template-columns: 92px 1fr; }
+  }
+  @media (max-width: 560px){ .feat{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand-mark">
+      <span class="en">Aethel&nbsp;Cataria</span>
+      <span class="kr">에델 카타리아</span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="index.html">홈</a>
+      <a href="world.html">세계관</a>
+      <a href="works.html">작품</a>
+      <a href="shop.html">샵</a>
+      <a href="mailto:hello@aethelcataria.com?subject=%5B%EC%97%90%EB%8D%B8%EC%B9%B4%ED%83%80%EB%A6%AC%EC%95%84%5D%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">문의</a>
+      <details class="lang-switch-wrap">
+        <summary aria-label="언어 선택"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4.2" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></summary>
+        <div class="lang-menu">
+          <a href="en/works.html#diary" lang="en" hreflang="en">EN</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <p class="eyebrow">The Diary</p>
+    <h1>별의 약초도감 다이어리</h1>
+    <p class="en">Star Herbarium Diary 2027</p>
+    <p class="desc">고양이 약초사 바바가 열두 달 동안 정원에서 적어 둔 약초 노트를, 당신의 한 해를 기록하는 다이어리로 엮었습니다.</p>
+  </section>
+
+  <section class="section" style="padding-top:30px">
+    <div class="book-top">
+      <div class="book-cover"><img src="assets/images/diary/diary-cover.jpg" alt="별의 약초도감 다이어리 2027 하드커버 앞표지 실물 사진"></div>
+      <div class="book-info">
+        <p class="kicker">Diary · 2027</p>
+        <h2>별의 약초도감 다이어리 2027</h2>
+        <p class="sub">Star Herbarium Diary</p>
+        <p class="body">달력에는 달이 뜨고, 달마다 한 종의 약초가 피어납니다. 삭과 보름, 상현과 하현을 따라 한 해를 적어 내려가는 A5 하드커버 다이어리예요.</p>
+        <p class="body">바바의 손글씨 약초 기록 옆에 '나의 기록' 칸을 두었어요. 다이어리이면서, 한 해가 지나면 나만의 약초도감이 되는 책입니다.</p>
+        <p>
+          <span class="tag">A5 하드커버</span><span class="tag">148쪽</span><span class="tag">2027년 날짜형</span><span class="tag">달 위상 달력</span><span class="tag">열두 달의 약초</span>
+        </p>
+        <div class="book-cta">
+          <a class="btn btn-gold" href="https://tumblbug.com/aethelcataria" target="_blank" rel="noopener" data-live="다이어리 세트 후원하기" data-ended="텀블벅 프로젝트 보기">텀블벅에서 알림 신청하기</a>
+          <a class="btn btn-outline" href="book.html">함께 나오는 책 보기</a>
+          <p class="note" data-live="재인쇄 한정판 28권 · 『비밀정원』 펀딩 세트로 만나실 수 있어요" data-ended="재인쇄 한정판 펀딩이 마감되었어요 · 함께해 주셔서 감사합니다">재인쇄 한정판 28권 · 11월 20일(금) 오후 6시 텀블벅 『비밀정원』 펀딩 세트로 공개</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Features</p>
+      <div class="rule"></div>
+      <h2>이런 다이어리예요</h2>
+    </div>
+    <div class="feat">
+      <div><p class="n">01</p><h3>달력에 달이 떠 있어요</h3><p>삭 · 상현 · 보름 · 하현, 달 모양이 바뀌는 날을 달력에 표시했어요.</p></div>
+      <div><p class="n">02</p><h3>달마다 약초가 한 종씩</h3><p>지배 행성, 채집 위상, 바바의 손글씨 기록과 '나의 기록' 칸이 함께 있어요.</p></div>
+      <div><p class="n">03</p><h3>두 쪽을 다 쓰는 먼슬리</h3><p>펼침면 달력에 메모 칸까지 있어 넉넉하게 쓸 수 있어요.</p></div>
+      <div><p class="n">04</p><h3>한 해를 한눈에</h3><p>2027 · 2028 미니달력과 열두 달 일정을 한 번에 적는 연간 계획표가 있어요.</p></div>
+      <div><p class="n">05</p><h3>탁상달력과 한 세트</h3><p>달마다 표지에 탁상달력과 같은 삽화와 색이 들어가 있어요.</p></div>
+      <div><p class="n">06</p><h3>넉넉한 노트</h3><p>도트 노트 72쪽, 줄 노트 13쪽, 한 해의 목표를 적는 '올해의 정원'이 있어요.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Inside</p>
+      <div class="rule"></div>
+      <h2>펼쳐 보면</h2>
+      <p>인쇄된 실물을 직접 촬영한 사진이에요.</p>
+    </div>
+    <div class="ph-grid">
+      <figure><img src="assets/images/diary/diary-cover-angle.jpg" alt="다이어리 하드커버를 비스듬히 든 모습" loading="lazy"><figcaption>하드커버 · 가름끈</figcaption></figure>
+      <figure><img src="assets/images/diary/diary-title.jpg" alt="다이어리 속표지 펼침면" loading="lazy"><figcaption>속표지</figcaption></figure>
+      <figure><img src="assets/images/diary/diary-jan.jpg" alt="1월 표지와 로즈마리 약초 노트 펼침면" loading="lazy"><figcaption>1월 표지 · 바바의 약초 노트</figcaption></figure>
+      <figure><img src="assets/images/diary/diary-janmon.jpg" alt="1월 펼침면 먼슬리 달력" loading="lazy"><figcaption>펼침면 먼슬리</figcaption></figure>
+      <figure><img src="assets/images/diary/diary-dot.jpg" alt="도트 노트 펼침면" loading="lazy"><figcaption>도트 노트</figcaption></figure>
+      <figure><img src="assets/images/diary/diary-notes.jpg" alt="줄 노트 펼침면" loading="lazy"><figcaption>자유 노트</figcaption></figure>
+    </div>
+    <p class="ph-note">내지는 미색 종이라 조명에 따라 색이 조금 다르게 보일 수 있어요.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Contents</p>
+      <div class="rule"></div>
+      <h2>페이지 구성</h2>
+      <p>총 148쪽</p>
+    </div>
+    <dl class="parts">
+      <div><dt>여는 페이지<small>p.1 – 11</small></dt><dd>목차 · 이 책의 주인 · 사용법 · 바바 일러스트 · 한눈에 보는 2027 · 2028 · 한 해의 일정(연간 계획표)</dd></div>
+      <div><dt>열두 달<small>p.12 – 59 · 달마다 4쪽</small></dt><dd>월 표지(그달의 정원 일러스트, 달 이름, 이달의 약초) · 바바의 약초 노트(학명, 지배 행성, 채집 위상, 손글씨 기록, '나의 기록' 칸) · 펼침면 먼슬리(달 위상, 공휴일, 메모 칸)</dd></div>
+      <div><dt>부록<small>p.60 – 148</small></dt><dd>올해의 정원 2쪽 · 도트 노트 72쪽 · 자유 노트 13쪽 · 정원 지도 · 콜로폰</dd></div>
+    </dl>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Details</p>
+      <div class="rule"></div>
+      <h2>제품 정보</h2>
+    </div>
+    <dl class="spec">
+      <div><dt>제품명</dt><dd>별의 약초도감 다이어리 2027 · Star Herbarium Diary</dd></div>
+      <div><dt>사이즈</dt><dd>A5 (148×210mm)</dd></div>
+      <div><dt>제본</dt><dd>하드커버(양장) · 무광코팅 · 가름끈</dd></div>
+      <div><dt>페이지</dt><dd>148쪽 · 2027년 날짜형</dd></div>
+      <div><dt>내지</dt><dd>미색 모조지 100g · 전면 컬러 인쇄</dd></div>
+      <div><dt>만든 곳</dt><dd>에델카타리아</dd></div>
+      <div><dt>판매</dt><dd data-ended="재인쇄 한정판 펀딩 마감">재인쇄 한정판 28권 · 텀블벅 『비밀정원』 펀딩 세트 전용</dd></div>
+    </dl>
+    <div class="book-cta" style="justify-content:center;max-width:680px;margin:36px auto 0" data-hide-ended>
+      <a class="btn btn-gold" href="https://tumblbug.com/aethelcataria" target="_blank" rel="noopener" data-live="다이어리 세트 후원하기">텀블벅에서 알림 신청하기</a>
+      <a class="btn btn-outline" href="works.html#diary">다른 작품 보기</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-cta">
+      <h2>정원 소식이 궁금하신가요?</h2>
+      <p class="footer-sub">다이어리와 책, 텀블벅 펀딩, 새 굿즈 소식을 가장 먼저 보내 드려요.</p>
+      <a class="btn btn-gold" href="https://page.stibee.com/subscriptions/526377" target="_blank" rel="noopener">소식 받아 보기</a>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="world.html">세계관</a></li>
+          <li><a href="works.html">작품</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="shop.html">스토어 보기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@aethelcataria.com">hello@aethelcataria.com</a></li>
+          <li><a href="https://pf.kakao.com/_YXvxaX" target="_blank" rel="noopener">카카오톡 채널</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/aethel.cataria/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://tumblbug.com/u/herbalist-cat-garden" target="_blank" rel="noopener">Tumblbug</a></li>
+          <li><a href="https://klarahatfield.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
+          <li><a href="https://www.deviantart.com/klarahatfield/" target="_blank" rel="noopener">DeviantArt</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>© Aethel Cataria · 에델 카타리아</span>
+    <span>Illustrated &amp; written by Klara</span>
+  </div>
+  <div class="footer-legal">사업자등록번호 631-06-03216 · 출판사 신고번호 제2026-000040호</div>
+</footer>
+
+<script data-goatcounter="https://aethelcataria.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<script src="assets/funding-phase.js"></script>
+
+<!-- 카카오톡 채널 채팅 버튼 -->
+<a class="kakao-float" href="https://pf.kakao.com/_YXvxaX/chat" target="_blank" rel="noopener" aria-label="카카오톡 채널로 문의하기">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.48 3 2 6.54 2 10.9c0 2.8 1.86 5.27 4.66 6.67l-.95 3.48c-.08.3.26.54.52.37l4.15-2.74c.53.06 1.07.1 1.62.1 5.52 0 10-3.54 10-7.88S17.52 3 12 3z"/></svg>
+  <span>카카오톡 문의</span>
+</a>
+
+</body>
+</html>

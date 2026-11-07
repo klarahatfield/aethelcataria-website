@@ -11,6 +11,11 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://aethelcataria.com/diary.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://aethelcataria.com/world.html</loc>
     <lastmod>2026-11-07</lastmod>
     <priority>0.80</priority>
