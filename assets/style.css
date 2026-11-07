@@ -778,7 +778,7 @@ a:focus-visible, button:focus-visible{
 /* ---------- responsive ---------- */
 @media (max-width: 640px){
   .site-header .wrap{ flex-wrap: wrap; row-gap: 14px; }
-  .site-nav{ gap: 16px; width: 100%; justify-content: flex-start; }
+  .site-nav{ gap: 16px; row-gap: 10px; width: 100%; justify-content: flex-start; flex-wrap: wrap; }
   .hero{ padding-top: 56px; padding-bottom: 64px; }
   .section{ padding-top: 60px; padding-bottom: 60px; }
   .specimen{ flex-basis: 148px; }

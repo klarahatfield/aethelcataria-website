@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>샵 · Aethel Cataria</title>
-<meta name="description" content="씰 스티커, 엽서 등 에델 카타리아의 소품을 만나볼 수 있는 온라인 스토어 모음.">
+<meta name="description" content="『에델 카타리아』 1권 텀블벅 펀딩과 씰 스티커, 엽서 등 에델 카타리아의 소품을 만나볼 수 있는 온라인 스토어 모음.">
 <link rel="alternate" hreflang="ko" href="https://aethelcataria.com/shop.html">
 <link rel="alternate" hreflang="en" href="https://aethelcataria.com/en/shop.html">
 <link rel="stylesheet" href="assets/style.css?v=20261028b">
@@ -37,6 +37,20 @@
     margin: 0 0 24px;
   }
   .shop-card.is-soon{ opacity: .5; }
+  .shop-card.is-feature{
+    grid-column: 1 / -1;
+    border-color: rgba(212,175,106,.55);
+    background: linear-gradient(180deg, rgba(212,175,106,.08), rgba(255,255,255,.02));
+  }
+  .shop-card .shop-kicker{
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 10px;
+  }
+  .shop-card .shop-actions{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
 </style>
 </head>
 <body>
@@ -74,6 +88,15 @@
 
   <section class="section" style="padding-top:20px">
     <div class="shop-grid">
+      <div class="shop-card is-feature">
+        <p class="shop-kicker" data-live="Tumblbug · 펀딩 진행 중 (12월 21일까지)" data-ended="Tumblbug · 펀딩 마감">Tumblbug · 11월 20일(금) 오후 6시 오픈</p>
+        <h3>삼백 살 약초사 고양이의 비밀정원</h3>
+        <p data-ended="함께해 주셔서 감사합니다. 『에델 카타리아』 1권은 2026년 12월 30일에 출간됩니다.">판타지 소설 『에델 카타리아』 1권과 정원지도 무릎담요, 비밀정원 머그컵, 재인쇄 한정판 약초도감 다이어리 세트를 텀블벅에서 가장 먼저 만나보세요.</p>
+        <div class="shop-actions">
+          <a class="btn btn-gold" href="https://tumblbug.com/aethelcataria" target="_blank" rel="noopener" data-live="텀블벅에서 후원하기" data-ended="텀블벅 프로젝트 보기">텀블벅에서 알림 신청하기</a>
+          <a class="btn btn-outline" href="book.html">책 소개 보기</a>
+        </div>
+      </div>
       <div class="shop-card">
         <h3>텐바이텐</h3>
         <p>씰 스티커, 엽서 등 에델 카타리아의 소품을 만나보세요.</p>
@@ -142,6 +165,8 @@
 
 <script data-goatcounter="https://aethelcataria.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<script src="assets/funding-phase.js"></script>
 
 <!-- 카카오톡 채널 채팅 버튼 -->
 <a class="kakao-float" href="https://pf.kakao.com/_YXvxaX/chat" target="_blank" rel="noopener" aria-label="카카오톡 채널로 문의하기">
