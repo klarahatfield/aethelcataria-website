@@ -59,6 +59,13 @@
     .spec div{ grid-template-columns: 92px 1fr; }
   }
   @media (max-width: 560px){ .feat{ grid-template-columns: 1fr; } }
+  .gardens-img{ max-width: 760px; margin: 0 auto; }
+  .gardens-img img{ width: 100%; display: block; border-radius: 4px; }
+  .spreads{ max-width: 860px; margin: 0 auto; display: grid; gap: 40px; }
+  .spreads figure{ margin: 0; text-align: center; }
+  .spreads img{ width: 100%; display: block; border-radius: 4px; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+  .spreads h3{ font-family: var(--font-display-kr); font-weight: 400; font-size: 1.2rem; color: var(--parchment); margin: 0 0 6px; }
+  .spreads figcaption p{ color: var(--parchment-dim); font-size: .9rem; margin: 0 0 16px; }
 </style>
 </head>
 <body>
@@ -133,6 +140,30 @@
 
   <section class="section">
     <div class="section-head">
+      <p class="eyebrow">Twelve Gardens</p>
+      <div class="rule"></div>
+      <h2>열두 달, 열두 개의 정원</h2>
+      <p>달마다 바바의 정원은 다른 얼굴을 하고 있어요.</p>
+    </div>
+    <div class="gardens-img"><img src="assets/images/diary/diary-twelve-gardens.jpg" alt="1월부터 12월까지 달마다 다른 바바의 정원 일러스트 열두 장" loading="lazy"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Every Month</p>
+      <div class="rule"></div>
+      <h2>달마다 4쪽, 열두 달</h2>
+    </div>
+    <div class="spreads">
+      <figure><figcaption><h3>월 표지 · 바바의 약초 노트</h3><p>그달의 정원 일러스트와 달 이름, 이달의 약초 이야기.</p></figcaption><img src="assets/images/diary/diary-spread-jan.jpg" alt="1월 월 표지와 로즈마리 약초 노트 펼침면" loading="lazy"></figure>
+      <figure><figcaption><h3>펼침면 먼슬리</h3><p>날짜 옆 달 위상 아이콘, 공휴일과 천문 현상, MEMO 칸.</p></figcaption><img src="assets/images/diary/diary-spread-monthly.jpg" alt="1월 먼슬리 달력 펼침면" loading="lazy"></figure>
+      <figure><figcaption><h3>5월 · 장미</h3><p>달마다 다른 정원과 약초가 이어져요.</p></figcaption><img src="assets/images/diary/diary-spread-may.jpg" alt="5월 월 표지와 장미 약초 노트 펼침면" loading="lazy"></figure>
+    </div>
+    <p style="text-align:center;color:var(--parchment-dim);font-size:.8rem;margin-top:22px">※ 내지 이미지는 인쇄 파일을 화면으로 옮긴 것으로, 실제 내지는 미색 종이예요.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
       <p class="eyebrow">Inside</p>
       <div class="rule"></div>
       <h2>펼쳐 보면</h2>
@@ -157,9 +188,9 @@
       <p>총 148쪽</p>
     </div>
     <dl class="parts">
-      <div><dt>여는 페이지<small>p.1 – 11</small></dt><dd>목차 · 이 책의 주인 · 사용법 · 바바 일러스트 · 한눈에 보는 2027 · 2028 · 한 해의 일정(연간 계획표)</dd></div>
-      <div><dt>열두 달<small>p.12 – 59 · 달마다 4쪽</small></dt><dd>월 표지(그달의 정원 일러스트, 달 이름, 이달의 약초) · 바바의 약초 노트(학명, 지배 행성, 채집 위상, 손글씨 기록, '나의 기록' 칸) · 펼침면 먼슬리(달 위상, 공휴일, 메모 칸)</dd></div>
-      <div><dt>부록<small>p.60 – 148</small></dt><dd>올해의 정원 2쪽 · 도트 노트 72쪽 · 자유 노트 13쪽 · 정원 지도 · 콜로폰</dd></div>
+      <div><dt>여는 페이지<small>p.1 – 13</small></dt><dd>속표지 · 목차 · 이 책의 주인 · 사용법 · 바바 일러스트 · 한눈에 보는 2027 · 2028 · 한 해의 일정(연간 계획표) · 올해의 정원</dd></div>
+      <div><dt>열두 달<small>p.14 – 61 · 달마다 4쪽</small></dt><dd>월 표지(그달의 정원 일러스트, 달 이름, 이달의 약초) · 바바의 약초 노트(학명, 지배 행성, 채집 위상, 손글씨 기록, '나의 기록' 칸) · 펼침면 먼슬리(달 위상, 공휴일, 메모 칸)</dd></div>
+      <div><dt>노트와 부록<small>p.62 – 148</small></dt><dd>도트 노트 72쪽 · 자유 노트 13쪽 · 정원 지도 · 콜로폰</dd></div>
     </dl>
   </section>
 
