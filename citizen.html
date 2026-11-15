@@ -282,7 +282,7 @@
       nameEl=document.getElementById('rzName'), done=document.getElementById('rzDone'),
       doneName=document.getElementById('rzDoneName'), save=document.getElementById('rzSave');
   var portrait=new Image(); portrait.src=BABA;
-  var bgImg=new Image(); bgImg.src='assets/images/citizen-card-bg.jpg';
+  var bgImg=new Image(); bgImg.src='assets/images/citizen-card-bg.jpg?v=20261115b';
   var photo={img:null,zoom:1,px:0,py:0};
   function photoSide(){ return Math.min(photo.img.naturalWidth,photo.img.naturalHeight)/photo.zoom; }
   function clampPhoto(){
@@ -308,8 +308,8 @@
     x.beginPath(); if(x.roundRect){ x.roundRect(0,0,W,H,12); } else { x.rect(0,0,W,H); } x.clip();
     if(bgImg.complete&&bgImg.naturalWidth){ x.drawImage(bgImg,0,0,W,H); } else { x.fillStyle='#ecdcb4'; x.fillRect(0,0,W,H); }
     // title
-    x.textBaseline='alphabetic'; x.textAlign='left'; x.fillStyle=INK; x.fillStyle=LBL; x.font='19px '+MONO; if('letterSpacing' in x) x.letterSpacing='0.5px'; x.fillText('AETHEL CATARIA',458,82); if('letterSpacing' in x) x.letterSpacing='0px';
-    x.fillStyle=INK; x.font='46px '+DISP; x.fillText('정원 주민 등록증',458,140);
+    x.textBaseline='alphabetic'; x.textAlign='left'; x.fillStyle=INK; x.fillStyle=LBL; x.font='19px '+MONO; if('letterSpacing' in x) x.letterSpacing='0.5px'; x.fillText('AETHEL CATARIA',458,76); if('letterSpacing' in x) x.letterSpacing='0px';
+    x.fillStyle=INK; x.font='46px '+DISP; x.fillText('정원 주민 등록증',458,134);
     // portrait
     var cx=238,cy=360,r=139;
     x.save(); x.beginPath(); x.arc(cx,cy,r,0,Math.PI*2); x.closePath(); x.clip();
