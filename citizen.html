@@ -284,7 +284,8 @@
     x.beginPath(); if(x.roundRect){ x.roundRect(0,0,W,H,12); } else { x.rect(0,0,W,H); } x.clip();
     if(bgImg.complete&&bgImg.naturalWidth){ x.drawImage(bgImg,0,0,W,H); } else { x.fillStyle='#ecdcb4'; x.fillRect(0,0,W,H); }
     // title
-    x.textBaseline='alphabetic'; x.textAlign='left'; x.fillStyle=INK; x.font='46px '+DISP; x.fillText('정원 주민 등록증',458,161);
+    x.textBaseline='alphabetic'; x.textAlign='left'; x.fillStyle=INK; x.fillStyle=LBL; x.font='19px '+MONO; if('letterSpacing' in x) x.letterSpacing='0.5px'; x.fillText('AETHEL CATARIA',458,82); if('letterSpacing' in x) x.letterSpacing='0px';
+    x.fillStyle=INK; x.font='46px '+DISP; x.fillText('정원 주민 등록증',458,140);
     // portrait
     var cx=238,cy=360,r=139;
     x.save(); x.beginPath(); x.arc(cx,cy,r,0,Math.PI*2); x.closePath(); x.clip();
@@ -317,7 +318,14 @@
     x.restore();
     return c.toDataURL('image/png');
   }
-  function fontsReady(){ try{ return Promise.all([document.fonts.load('46px "Gowun Batang"'),document.fonts.load('58px "Song Myung"'),document.fonts.load('22px "Special Elite"')]).catch(function(){}); }catch(e){ return Promise.resolve(); } }
+  var FIXED_TXT='정원 주민 등록증 이름 직업 거주지 등록일 등록 번호 에델 카타리아 영토 · 장부 견 본 발급 약초사 바바 당신의 이름 정원 주민 0123456789년월일 EC- aethelcataria.com AETHEL CATARIA '+PLACES.join('');
+  function allTxt(extra){ var jobs=''; try{ jobs=Array.prototype.map.call(document.getElementById('rzJob').options,function(o){return o.text;}).join(''); }catch(e){} return FIXED_TXT+jobs+(extra||''); }
+  function fontsReady(extra){
+    try{
+      var t=allTxt(extra);
+      return Promise.all([document.fonts.load('30px "Gowun Batang"',t),document.fonts.load('46px "Song Myung"',t),document.fonts.load('22px "Special Elite"','AETHEL CATARIA aethelcataria.com 0123456789')]).catch(function(){});
+    }catch(e){ return Promise.resolve(); }
+  }
   var issuedName='';
   var SHARE_URL='https://aethelcataria.com/citizen.html';
   var SHARE_TEXT='나도 정원 주민이 됐어요! #에델카타리아 #정원주민등록증 · 11월 20일 텀블벅 오픈';
@@ -348,9 +356,14 @@
     }
     if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(SHARE_URL).then(function(){ note('링크를 복사했어요.'); },fallback); } else fallback();
   });
-  function redraw(){
+  function redrawNow(){
     if(issuedName){ var u=draw(issuedName,true); imgEl.src=u; save.href=u; }
     else { imgEl.src=draw('',false); }
+  }
+  function redraw(){
+    var t=allTxt(issuedName+jobValue());
+    var ok=false; try{ ok=document.fonts.check('30px "Gowun Batang"',t)&&document.fonts.check('46px "Song Myung"',t); }catch(e){}
+    if(ok){ redrawNow(); } else { fontsReady(issuedName+jobValue()).then(redrawNow); }
   }
   function sample(){ imgEl.src=draw('',false); }
   var fileEl=document.getElementById('rzFile'), pick=document.getElementById('rzPick'), reset=document.getElementById('rzReset'),
@@ -401,7 +414,7 @@
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var name=nameEl.value.replace(/\s+/g,' ').trim(); if(!name){ nameEl.focus(); return; }
-    Promise.all([ready,fontsReady()]).then(function(){
+    Promise.all([ready,fontsReady(name+jobValue())]).then(function(){
       issuedName=name; var url=draw(name,true); imgEl.src=url; imgEl.alt='주민 등록증: '+name;
       save.href=url; save.download='에델카타리아_주민등록증_'+name.replace(/[\/:*?"<>|]/g,'')+'.png';
       doneName.textContent=name; done.hidden=false;
