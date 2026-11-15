@@ -954,3 +954,6 @@ html[lang="ko"] .tb-popup-cta{ letter-spacing: .02em; }
   .kakao-float{ right: 14px; bottom: 14px; padding: 12px; }
   .kakao-float span{ display: none; }
 }
+
+/* 정원 주민 등록 링크: 오픈 전에는 눌리지 않는 글자, 오픈 뒤(funding-phase.js가 href를 붙임)에는 링크 */
+.footer-col a.footer-soon:not([href]){color:var(--parchment-dim);opacity:.65;cursor:default;text-decoration:none}
