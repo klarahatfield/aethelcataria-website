@@ -39,7 +39,22 @@
 .cz-newsbox{border:1px solid rgba(212,175,106,.3);background:rgba(29,34,66,.55);padding:28px 24px;border-radius:3px}
 .cz-newsbox h3{font-family:var(--font-display-kr);font-weight:400;font-size:1.25rem;margin:0 0 10px}
 .cz-newsbox p{margin:0 auto 20px;max-width:440px;color:var(--parchment-dim);font-size:.88rem;line-height:1.8;word-break:keep-all}
-@media (max-width:520px){.rz-row{flex-direction:column}.rz-row .btn{justify-content:center}}
+.rz-photo{margin-top:22px;padding:18px 18px 16px;border:1px dashed rgba(212,175,106,.4);border-radius:3px;text-align:left}
+.rz-photo-title{font-size:.9rem;color:var(--gold-soft);margin:0 0 12px}
+.rz-photo-title em{font-style:normal;color:var(--parchment-dim);font-size:.8rem;margin-left:6px}
+.rz-photo-btns{display:flex;gap:10px;flex-wrap:wrap}
+.rz-photo-btns .btn{cursor:pointer;border:0;font-size:.85rem;padding:10px 18px}
+.rz-photo-btns .btn-outline{border:1px solid rgba(212,175,106,.5);background:transparent;color:var(--parchment)}
+.rz-photo-btns .btn[hidden]{display:none}
+.rz-edit{display:flex;gap:18px;align-items:center;margin-top:16px}
+.rz-edit[hidden]{display:none}
+.rz-edit canvas{width:150px;height:150px;border-radius:50%;touch-action:none;cursor:grab;flex:none;background:#f4eedd;border:2px solid #b99a57}
+.rz-edit canvas:active{cursor:grabbing}
+.rz-edit-side{flex:1;min-width:0}
+.rz-edit-side label{display:block;font-size:.8rem;color:var(--parchment-dim);margin-bottom:6px}
+.rz-edit-side input[type=range]{width:100%;accent-color:#c9a96a}
+.rz-edit-side p{font-size:.76rem;color:var(--parchment-dim);margin:8px 0 0;line-height:1.7;word-break:keep-all}
+@media (max-width:520px){.rz-row{flex-direction:column}.rz-edit{flex-direction:column;align-items:center}.rz-edit-side{width:100%}.rz-row .btn{justify-content:center}}
 
 .page-hero p.desc,.cz-item p,.cz-tb p,.cz-privacy p,.cz-sample-note{word-break:keep-all}
 .cz-card-wrap{display:flex;justify-content:center;padding:10px 0 0}
@@ -134,7 +149,23 @@
           <input id="rzName" name="nick" type="text" maxlength="12" placeholder="닉네임이나 이름 (12자까지)" required>
           <button class="btn btn-gold" type="submit">등록증 발급받기</button>
         </div>
-        <p class="rz-hint">적은 이름은 이 화면에서 등록증을 그리는 데만 쓰이고, 어디에도 저장되거나 전송되지 않아요.</p>
+        <div class="rz-photo">
+          <p class="rz-photo-title">등록증 사진 <em>선택 · 안 넣으면 바바 초상이 들어가요</em></p>
+          <div class="rz-photo-btns">
+            <button type="button" class="btn btn-outline" id="rzPick">사진 고르기</button>
+            <button type="button" class="btn btn-outline" id="rzReset" hidden>바바 초상으로 되돌리기</button>
+          </div>
+          <input id="rzFile" type="file" accept="image/*" hidden>
+          <div class="rz-edit" id="rzEdit" hidden>
+            <canvas id="rzAdj" width="300" height="300" aria-label="사진 위치 조절"></canvas>
+            <div class="rz-edit-side">
+              <label for="rzZoom">크기</label>
+              <input id="rzZoom" type="range" min="1" max="3" step="0.02" value="1">
+              <p>동그라미 안에서 사진을 끌어 위치를 맞춰 보세요.</p>
+            </div>
+          </div>
+        </div>
+        <p class="rz-hint">이름과 사진은 이 화면에서 등록증을 그리는 데만 쓰이고, 어디에도 저장되거나 전송되지 않아요. 사진은 서버로 올라가지 않아요.</p>
       </form>
       <div id="rzDone" class="rz-done" hidden>
         <p class="rz-done-msg">정원 장부에 올랐어요. 환영합니다, <strong id="rzDoneName"></strong>님.</p>
@@ -192,6 +223,16 @@
       nameEl=document.getElementById('rzName'), done=document.getElementById('rzDone'),
       doneName=document.getElementById('rzDoneName'), save=document.getElementById('rzSave');
   var portrait=new Image(); portrait.src=BABA;
+  var photo={img:null,zoom:1,px:0,py:0};
+  function photoSide(){ return Math.min(photo.img.naturalWidth,photo.img.naturalHeight)/photo.zoom; }
+  function clampPhoto(){
+    var w=photo.img.naturalWidth,h=photo.img.naturalHeight,s=photoSide();
+    photo.px=Math.max(s/2,Math.min(w-s/2,photo.px)); photo.py=Math.max(s/2,Math.min(h-s/2,photo.py));
+  }
+  function drawPhoto(ctx,cx,cy,r){
+    clampPhoto(); var s=photoSide();
+    ctx.drawImage(photo.img,photo.px-s/2,photo.py-s/2,s,s,cx-r,cy-r,2*r,2*r);
+  }
   function hash(str){ var h=2166136261; str=str.normalize('NFC'); for(var i=0;i<str.length;i++){ h^=str.charCodeAt(i); h=Math.imul(h,16777619)>>>0; } return h>>>0; }
   function today(){ var d=new Date(); return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'; }
   function fit(ctx,text,font,max,start,min){ var s=start; do{ ctx.font=s+'px '+font; if(ctx.measureText(text).width<=max) break; s-=2; }while(s>min); return s; }
@@ -210,7 +251,8 @@
     var cx=240,cy=360,r=140;
     x.save(); x.beginPath(); x.arc(cx,cy,r,0,Math.PI*2); x.closePath(); x.clip();
     x.fillStyle='#f4eedd'; x.fillRect(cx-r,cy-r,2*r,2*r);
-    if(portrait.complete&&portrait.naturalWidth){ x.drawImage(portrait,cx-r,cy-r,2*r,2*r); }
+    if(photo.img){ drawPhoto(x,cx,cy,r); }
+    else if(portrait.complete&&portrait.naturalWidth){ x.drawImage(portrait,cx-r,cy-r,2*r,2*r); }
     x.restore();
     x.strokeStyle='#b99a57'; x.lineWidth=6; x.beginPath(); x.arc(cx,cy,r+4,0,Math.PI*2); x.stroke();
     x.fillStyle='#7c6230'; x.font='20px '+KR; x.textAlign='center'; x.fillText('발급 · 약초사 바바',cx,cy+r+50);
@@ -237,14 +279,57 @@
     return c.toDataURL('image/png');
   }
   function fontsReady(){ try{ return Promise.all([document.fonts.load('46px "Gowun Batang"'),document.fonts.load('58px "Song Myung"'),document.fonts.load('22px "Special Elite"')]).catch(function(){}); }catch(e){ return Promise.resolve(); } }
+  var issuedName='';
+  function redraw(){
+    if(issuedName){ var u=draw(issuedName,true); imgEl.src=u; save.href=u; }
+    else { imgEl.src=draw('',false); }
+  }
   function sample(){ imgEl.src=draw('',false); }
+  var fileEl=document.getElementById('rzFile'), pick=document.getElementById('rzPick'), reset=document.getElementById('rzReset'),
+      edit=document.getElementById('rzEdit'), adj=document.getElementById('rzAdj'), zoomEl=document.getElementById('rzZoom');
+  function drawAdj(){
+    var a=adj.getContext('2d'); a.clearRect(0,0,adj.width,adj.height);
+    a.fillStyle='#f4eedd'; a.fillRect(0,0,adj.width,adj.height);
+    if(photo.img){ drawPhoto(a,adj.width/2,adj.height/2,adj.width/2); }
+  }
+  pick.addEventListener('click',function(){ fileEl.click(); });
+  fileEl.addEventListener('change',function(){
+    var f=fileEl.files&&fileEl.files[0]; if(!f) return;
+    if(!/^image\//.test(f.type)){ alert('이미지 파일을 골라 주세요.'); fileEl.value=''; return; }
+    var url=URL.createObjectURL(f), im=new Image();
+    im.onload=function(){
+      photo.img=im; photo.zoom=1; photo.px=im.naturalWidth/2; photo.py=im.naturalHeight/2; zoomEl.value=1;
+      edit.hidden=false; reset.hidden=false; pick.textContent='다른 사진 고르기';
+      drawAdj(); redraw(); URL.revokeObjectURL(url);
+    };
+    im.onerror=function(){ URL.revokeObjectURL(url); alert('이 사진은 열 수 없어요. 다른 사진으로 시도해 주세요.'); };
+    im.src=url;
+  });
+  reset.addEventListener('click',function(){
+    photo.img=null; fileEl.value=''; edit.hidden=true; reset.hidden=true; pick.textContent='사진 고르기'; redraw();
+  });
+  zoomEl.addEventListener('input',function(){
+    if(!photo.img) return; photo.zoom=parseFloat(zoomEl.value); drawAdj(); redraw();
+  });
+  (function(){
+    var drag=null;
+    adj.addEventListener('pointerdown',function(e){ if(!photo.img) return; drag={x:e.clientX,y:e.clientY}; adj.setPointerCapture(e.pointerId); });
+    adj.addEventListener('pointermove',function(e){
+      if(!drag||!photo.img) return;
+      var k=photoSide()/adj.getBoundingClientRect().width;
+      photo.px-=(e.clientX-drag.x)*k; photo.py-=(e.clientY-drag.y)*k; drag={x:e.clientX,y:e.clientY};
+      drawAdj(); redraw();
+    });
+    function end(){ drag=null; }
+    adj.addEventListener('pointerup',end); adj.addEventListener('pointercancel',end);
+  })();
   var ready=new Promise(function(res){ if(portrait.complete) res(); else { portrait.onload=res; portrait.onerror=res; } });
   Promise.all([ready,fontsReady()]).then(sample);
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var name=nameEl.value.replace(/\s+/g,' ').trim(); if(!name){ nameEl.focus(); return; }
     Promise.all([ready,fontsReady()]).then(function(){
-      var url=draw(name,true); imgEl.src=url; imgEl.alt='주민 등록증: '+name;
+      issuedName=name; var url=draw(name,true); imgEl.src=url; imgEl.alt='주민 등록증: '+name;
       save.href=url; save.download='에델카타리아_주민등록증_'+name.replace(/[\/:*?"<>|]/g,'')+'.png';
       doneName.textContent=name; done.hidden=false;
       imgEl.scrollIntoView({behavior:'smooth',block:'center'});
