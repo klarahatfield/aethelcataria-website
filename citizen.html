@@ -282,7 +282,7 @@
       nameEl=document.getElementById('rzName'), done=document.getElementById('rzDone'),
       doneName=document.getElementById('rzDoneName'), save=document.getElementById('rzSave');
   var portrait=new Image(); portrait.src=BABA;
-  var bgImg=new Image(); bgImg.src='assets/images/citizen-card-bg.jpg?v=20261115b';
+  var bgImg=new Image(); bgImg.src='assets/images/citizen-card-bg.jpg?v=20261115c';
   var photo={img:null,zoom:1,px:0,py:0};
   function photoSide(){ return Math.min(photo.img.naturalWidth,photo.img.naturalHeight)/photo.zoom; }
   function clampPhoto(){
@@ -338,7 +338,8 @@
     x.fillStyle='rgba(125,55,45,.88)'; x.textAlign='center'; x.font='29px '+DISP; x.fillText(issued?'정원 장부 등록':'견 본',0,10);
     x.restore();
     // issuer, next to the site address
-    x.fillStyle=LBL; x.textAlign='left'; x.font='18px '+KR; x.fillText('|   발급 · 약초사 바바',700,713);
+    x.fillStyle=LBL; x.textAlign='left'; x.font='18px '+MONO; var urlTxt='aethelcataria.com'; x.fillText(urlTxt,96,713);
+    var uw=x.measureText(urlTxt).width; x.font='18px '+KR; x.fillText('|   발급 · 약초사 바바',96+uw+10,713);
     x.restore();
     return c.toDataURL('image/png');
   }
