@@ -35,6 +35,11 @@
 .rz-done{margin-top:34px}
 .rz-done[hidden]{display:none}
 .rz-done-msg{font-family:var(--font-display-kr);font-size:1.25rem;margin:0 0 18px}
+.rz-share{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.rz-share button,.rz-share a{cursor:pointer;font:inherit;font-size:.85rem;color:var(--parchment);background:transparent;border:1px solid rgba(212,175,106,.5);padding:10px 18px;border-radius:2px;text-decoration:none;line-height:1.2}
+.rz-share button:hover,.rz-share a:hover{background:rgba(212,175,106,.12)}
+.rz-share [hidden]{display:none}
+.rz-share-note{min-height:1.4em;font-size:.8rem;color:var(--gold-soft);margin:10px 0 0}
 .rz-done-msg strong{color:var(--gold-soft);font-weight:400}
 .cz-newsbox{border:1px solid rgba(212,175,106,.3);background:rgba(29,34,66,.55);padding:28px 24px;border-radius:3px}
 .cz-newsbox h3{font-family:var(--font-display-kr);font-weight:400;font-size:1.25rem;margin:0 0 10px}
@@ -171,6 +176,14 @@
         <p class="rz-done-msg">정원 장부에 올랐어요. 환영합니다, <strong id="rzDoneName"></strong>님.</p>
         <a id="rzSave" class="btn btn-gold" download="aethelcataria-resident-card.png" href="#">등록증 이미지 저장하기</a>
         <p class="rz-hint" style="margin-top:12px">휴대폰에서는 카드를 길게 눌러 저장할 수도 있어요.</p>
+        <div class="rz-share" aria-label="등록증 공유">
+          <button type="button" id="rzShare" hidden>공유하기</button>
+          <button type="button" id="rzCopy">링크 복사</button>
+          <a id="rzFb" target="_blank" rel="noopener">페이스북</a>
+          <a id="rzTw" target="_blank" rel="noopener">X</a>
+        </div>
+        <p class="rz-share-note" id="rzShareNote" role="status" aria-live="polite"></p>
+        <p class="rz-hint" style="margin-top:4px">인스타그램은 저장한 이미지를 직접 올리거나, 휴대폰에서 "공유하기"를 눌러 보내세요.</p>
       </div>
     </div>
   </section>
@@ -280,6 +293,35 @@
   }
   function fontsReady(){ try{ return Promise.all([document.fonts.load('46px "Gowun Batang"'),document.fonts.load('58px "Song Myung"'),document.fonts.load('22px "Special Elite"')]).catch(function(){}); }catch(e){ return Promise.resolve(); } }
   var issuedName='';
+  var SHARE_URL='https://aethelcataria.com/citizen.html';
+  var SHARE_TEXT='나도 정원 주민이 됐어요! #에델카타리아 #정원주민등록증 · 11월 20일 텀블벅 오픈';
+  var shareBtn=document.getElementById('rzShare'), copyBtn=document.getElementById('rzCopy'),
+      fbBtn=document.getElementById('rzFb'), twBtn=document.getElementById('rzTw'), shareNote=document.getElementById('rzShareNote');
+  fbBtn.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(SHARE_URL)+'&quote='+encodeURIComponent(SHARE_TEXT);
+  twBtn.href='https://twitter.com/intent/tweet?text='+encodeURIComponent(SHARE_TEXT)+'&url='+encodeURIComponent(SHARE_URL);
+  function note(t){ shareNote.textContent=t; clearTimeout(note.t); note.t=setTimeout(function(){ shareNote.textContent=''; },3500); }
+  function cardFile(){
+    return fetch(imgEl.src).then(function(r){ return r.blob(); }).then(function(b){ return new File([b],'aethelcataria-resident-card.png',{type:'image/png'}); });
+  }
+  try{
+    if(navigator.share&&navigator.canShare&&window.File){
+      var probe=new File([new Blob(['x'],{type:'image/png'})],'t.png',{type:'image/png'});
+      if(navigator.canShare({files:[probe]})) shareBtn.hidden=false;
+    }
+  }catch(e){}
+  shareBtn.addEventListener('click',function(){
+    cardFile().then(function(f){
+      return navigator.share({files:[f],title:'정원 주민 등록증',text:SHARE_TEXT,url:SHARE_URL});
+    }).catch(function(err){ if(err&&err.name!=='AbortError') note('공유 창을 열지 못했어요. 이미지를 저장해서 올려 주세요.'); });
+  });
+  copyBtn.addEventListener('click',function(){
+    function fallback(){
+      var t=document.createElement('textarea'); t.value=SHARE_URL; t.style.position='fixed'; t.style.opacity='0'; document.body.appendChild(t); t.select();
+      var ok=false; try{ ok=document.execCommand('copy'); }catch(e){} document.body.removeChild(t);
+      note(ok?'링크를 복사했어요.':'복사하지 못했어요: '+SHARE_URL);
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(SHARE_URL).then(function(){ note('링크를 복사했어요.'); },fallback); } else fallback();
+  });
   function redraw(){
     if(issuedName){ var u=draw(issuedName,true); imgEl.src=u; save.href=u; }
     else { imgEl.src=draw('',false); }
