@@ -8,6 +8,9 @@
     var START = new Date('2026-11-20T18:00:00+09:00').getTime();
     var END   = new Date('2026-12-22T00:00:00+09:00').getTime();
     var now = Date.now();
+    // 미리보기: 주소 뒤에 ?preview=live (오픈 뒤 화면) 또는 ?preview=ended (마감 뒤 화면)를 붙이면 그 시점 화면으로 보인다.
+    var pv = /[?&]preview=(live|ended)/.exec(location.search);
+    if (pv) now = (pv[1] === 'live') ? START : END;
     function swap(attr) {
       document.querySelectorAll('[' + attr + ']').forEach(function (el) {
         el.textContent = el.getAttribute(attr);
