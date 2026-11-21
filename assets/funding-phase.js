@@ -1,12 +1,12 @@
 /* 『비밀정원』 텀블벅 펀딩 시기별 문구 자동 전환 (한국 시간 기준)
    - data-live      : 11/20(금) 18:00 펀딩 오픈 뒤 보여 줄 문구
-   - data-ended     : 12/22 00:00 (12/21 마감) 뒤 보여 줄 문구
+   - data-ended     : 12/26 00:00 (12/25 마감) 뒤 보여 줄 문구
    - data-*-href    : 같은 시점에 바꿀 링크 (없으면 그대로)
    - data-hide-ended: 마감 뒤 숨길 요소 */
 (function () {
   try {
     var START = new Date('2026-11-20T18:00:00+09:00').getTime();
-    var END   = new Date('2026-12-22T00:00:00+09:00').getTime();
+    var END   = new Date('2026-12-26T00:00:00+09:00').getTime();
     var now = Date.now();
     // 미리보기: 주소 뒤에 ?preview=live (오픈 뒤 화면) 또는 ?preview=ended (마감 뒤 화면)를 붙이면 그 시점 화면으로 보인다.
     var pv = /[?&]preview=(live|ended)/.exec(location.search);
