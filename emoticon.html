@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>바바 이모티콘 · Aethel Cataria</title>
+<meta name="description" content="안경 쓰고 머리에 새싹이 자란 약초사 고양이 바바의 이모티콘. 직접 그린 손그림으로 만들고 있어요.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aethel Cataria · 에델 카타리아">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="바바 이모티콘 · Aethel Cataria">
+<meta property="og:description" content="안경 쓰고 머리에 새싹이 자란 약초사 고양이 바바의 이모티콘. 직접 그린 손그림으로 만들고 있어요.">
+<meta property="og:url" content="https://aethelcataria.com/emoticon.html">
+<meta property="og:image" content="https://aethelcataria.com/assets/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css?v=20261107b">
+<style>
+  .work-detail{
+    max-width: 760px;
+    margin: 0 auto 110px;
+    padding-top: 20px;
+    scroll-margin-top: 100px;
+  }
+  .work-detail:last-child{ margin-bottom: 40px; }
+  .work-detail-head{
+    display:flex; align-items:flex-start; gap:22px;
+    margin-bottom: 22px;
+  }
+  .work-detail-icon{
+    flex: 0 0 auto;
+    width: 52px; height: 52px;
+    color: var(--gold);
+  }
+  .work-detail-icon svg{ width: 100%; height: 100%; display: block; }
+  .work-detail-kicker{
+    font-family: var(--font-mono);
+    font-size: .7rem; letter-spacing:.1em; text-transform: uppercase;
+    color: var(--gold); margin: 0 0 8px;
+  }
+  .work-detail h2{
+    font-family: var(--font-display-kr);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+    color: var(--parchment);
+  }
+  .work-detail .en-title{
+    font-family: var(--font-display-en);
+    font-style: italic;
+    color: var(--gold-soft);
+    font-size: .95rem;
+    margin: 6px 0 0;
+  }
+  .work-detail p.body{
+    color: var(--parchment-dim);
+    margin: 0 0 16px;
+  }
+  .spec-list{
+    list-style: none;
+    margin: 22px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(212,175,106,.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 16px;
+  }
+  .spec-list li{
+    font-size: .84rem;
+  }
+  .spec-list .k{
+    display:block;
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .spec-list .v{ color: var(--parchment); }
+  .work-detail-cta{
+    margin-top: 26px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  hr.div{
+    border: none;
+    border-top: 1px solid rgba(212,175,106,.15);
+    max-width: 760px;
+    margin: 0 auto 90px;
+  }
+  .work-detail.has-media{
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+  .work-detail-media{
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid rgba(212,175,106,.25);
+    box-shadow: 0 14px 34px rgba(0,0,0,.35);
+    position: sticky;
+    top: 110px;
+  }
+  .work-detail-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media (max-width: 720px){
+    .work-detail.has-media{ grid-template-columns: 1fr; }
+    .work-detail-media{
+      position: static;
+      max-width: 320px;
+      margin: 0 auto 8px;
+    }
+  }
+</style>
+<style>
+  .emo-wrap{ max-width: 900px; margin: 0 auto; }
+  .emo-intro{ max-width: 760px; margin: 0 auto 70px; }
+  .emo-intro p.body{ color: var(--parchment-dim); margin: 0 0 16px; }
+  .emo-cuts{
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px; max-width: 760px; margin: 0 auto 70px;
+  }
+  .emo-card{
+    background: #F3EADB; border-radius: 3px;
+    border: 1px solid rgba(212,175,106,.35);
+    box-shadow: 0 14px 34px rgba(0,0,0,.35);
+    padding: 14px; text-align: center;
+  }
+  .emo-card img{ width: 100%; height: auto; display: block; }
+  .emo-card figcaption{
+    font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em;
+    color: #6b5a3e; margin-top: 8px;
+  }
+  .emo-points{
+    list-style: none; margin: 0 auto 70px; padding: 0; max-width: 760px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;
+  }
+  .emo-points li{ border-top: 1px solid rgba(212,175,106,.2); padding-top: 16px; }
+  .emo-points .k{
+    display:block; font-family: var(--font-mono); font-size:.68rem; letter-spacing:.1em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+  }
+  .emo-points .v{ color: var(--parchment); font-size: .92rem; }
+  .emo-cta{ display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top: 10px; }
+</style>
+
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="icon-cottage2" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M10 34 L32 13 L54 34"/>
+  <rect x="15" y="34" width="34" height="22"/>
+  <path d="M27 56 L27 41 Q32 36 37 41 L37 56"/>
+</symbol>
+<symbol id="icon-moonset2" viewBox="0 0 64 64" fill="currentColor" stroke="none">
+  <circle cx="20" cy="34" r="10" opacity=".38"/>
+  <circle cx="32" cy="27" r="13" opacity=".85"/>
+  <circle cx="46" cy="34" r="10" opacity=".38"/>
+</symbol>
+<symbol id="icon-book2" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M32 18 C24 12 14 14 10 18 L10 46 C14 42 24 40 32 46 C40 40 50 42 54 46 L54 18 C50 14 40 12 32 18 Z"/>
+  <line x1="32" y1="18" x2="32" y2="46"/>
+</symbol>
+<symbol id="icon-quill2" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M46 10 C31 18 20 33 15 52 L22 49 C29 32 39 20 50 14 Z"/>
+  <line x1="15" y1="52" x2="9" y2="59"/>
+</symbol>
+<symbol id="icon-sticker2" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M14 10 H40 L54 24 V54 H14 Z"/>
+  <path d="M40 10 V24 H54"/>
+  <path d="M28 32 L31.5 39 L39 40 L33.5 45 L35 52.5 L28 48.8 L21 52.5 L22.5 45 L17 40 L24.5 39 Z" fill="currentColor" stroke="none" opacity=".85"/>
+</symbol>
+</defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand-mark">
+      <span class="en">Aethel&nbsp;Cataria</span>
+      <span class="kr">에델 카타리아</span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="index.html">홈</a>
+      <a href="world.html">세계관</a>
+      <a href="works.html" aria-current="page">작품</a>
+      <a href="book.html">책</a>
+      <a href="shop.html">샵</a>
+      <a href="mailto:hello@aethelcataria.com?subject=%5B%EC%97%90%EB%8D%B8%EC%B9%B4%ED%83%80%EB%A6%AC%EC%95%84%5D%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">문의</a>
+          </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <p class="eyebrow">Emoticon</p>
+    <h1>바바 이모티콘</h1>
+    <p class="en">Baba the Herbalist Cat's Day</p>
+    <p class="desc">머리에 새싹이 자란, 안경 쓴 약초사 고양이 바바가 대화 속으로 놀러 갑니다.</p>
+  </section>
+
+  <section class="section" style="padding-top:40px">
+
+    <div class="emo-intro">
+      <p class="body">바바는 삼백 년 동안 정원을 돌봐 온 고양이 약초사입니다. 소설 『에델 카타리아』 속 그 바바가 이모티콘에서는 인사도 하고, 차도 마시고, 안경을 고쳐 쓰며 당황하기도 해요. 그런 바바의 하루를 손그림 이모티콘으로 옮기고 있습니다.</p>
+      <p class="body">굵은 펜선과 차분한 색으로 한 컷 한 컷 직접 그리고, 손글씨로 말을 붙였어요.</p>
+    </div>
+
+    <div class="emo-cuts">
+      <figure class="emo-card" style="margin:0">
+        <img src="assets/images/emoticon-hello.png" alt="앞발을 들어 인사하는 안경 쓴 오렌지 고양이 바바, 손글씨 '안녕'" width="360" height="360" loading="lazy">
+        <figcaption>안녕</figcaption>
+      </figure>
+      <figure class="emo-card" style="margin:0">
+        <img src="assets/images/emoticon-morning.png" alt="기지개를 켜며 약초 차를 앞에 둔 바바, 손글씨 '좋은 아침!'" width="360" height="360" loading="lazy">
+        <figcaption>좋은 아침!</figcaption>
+      </figure>
+    </div>
+
+    <ul class="emo-points">
+      <li><span class="k">Sprout</span><span class="v">머리 위의 새싹. 기분에 따라 쫑긋하기도, 처지기도 할 거예요.</span></li>
+      <li><span class="k">Glasses</span><span class="v">둥근 안경. 바바의 표정은 안경 속에서 가장 크게 변합니다.</span></li>
+      <li><span class="k">Herbs</span><span class="v">절구, 약병, 약초 잎. 약초사의 하루가 소품으로 이어져요.</span></li>
+    </ul>
+
+    <ul class="spec-list" style="max-width:760px;margin:0 auto 60px">
+      <li><span class="k">Character</span><span class="v">바바 · 약초사 고양이</span></li>
+      <li><span class="k">Format</span><span class="v">손그림 이모티콘</span></li>
+      <li><span class="k">Status</span><span class="v">제작 중</span></li>
+    </ul>
+
+    <div class="emo-cta">
+      <a class="btn btn-gold" href="https://page.stibee.com/subscriptions/526377" target="_blank" rel="noopener">소식 받아 보기</a>
+      <a class="btn btn-outline" href="book.html">바바가 나오는 소설 보기</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/aethel.cataria/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-cta">
+      <h2>이야기가 더 궁금하신가요?</h2>
+      <p class="footer-sub">1권 출간과 텀블벅 펀딩, 새 굿즈 소식을 가장 먼저 보내 드려요.</p>
+      <a class="btn btn-gold" href="https://page.stibee.com/subscriptions/526377" target="_blank" rel="noopener">소식 받아 보기</a>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="world.html">세계관</a></li>
+          <li><a href="works.html">작품</a></li>
+          <li><a href="citizen.html">정원 주민 등록하기</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="shop.html">스토어 보기</a></li>
+          <li><a href="wholesale.html">도매·협업 안내</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@aethelcataria.com">hello@aethelcataria.com</a></li>
+          <li><a href="https://pf.kakao.com/_YXvxaX" target="_blank" rel="noopener">카카오톡 채널</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/aethel.cataria/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://tumblbug.com/u/herbalist-cat-garden" target="_blank" rel="noopener">Tumblbug</a></li>
+          <li><a href="https://klarahatfield.itch.io/herbalist-cat-garden" target="_blank" rel="noopener">itch.io</a></li>
+          <li><a href="https://www.deviantart.com/klarahatfield/" target="_blank" rel="noopener">DeviantArt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Press</h5>
+        <ul>
+          <li><a href="assets/docs/aethelcataria-brand-intro.pdf" target="_blank" rel="noopener">브랜드 소개서 (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>© Aethel Cataria · 에델 카타리아</span>
+    <span>Story &amp; art direction by Klara</span>
+  </div>
+  <div class="footer-legal">사업자등록번호 631-06-03216 · 통신판매업 신고번호 제2026-서울강북-0686호 · 출판사 신고번호 제2026-000040호</div>
+</footer>
+
+<script data-goatcounter="https://aethelcataria.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<script src="assets/funding-phase.js"></script>
+
+<!-- 카카오톡 채널 채팅 버튼 -->
+<a class="kakao-float" href="https://pf.kakao.com/_YXvxaX/chat" target="_blank" rel="noopener" aria-label="카카오톡 채널로 문의하기">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.48 3 2 6.54 2 10.9c0 2.8 1.86 5.27 4.66 6.67l-.95 3.48c-.08.3.26.54.52.37l4.15-2.74c.53.06 1.07.1 1.62.1 5.52 0 10-3.54 10-7.88S17.52 3 12 3z"/></svg>
+  <span>카카오톡 문의</span>
+</a>
+
+</body>
+</html>
